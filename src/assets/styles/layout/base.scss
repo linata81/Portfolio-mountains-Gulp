@@ -3,7 +3,7 @@ body, html {
 }
 
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "roboto-regular", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   color: $text-color;
@@ -19,7 +19,10 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 95%;
+  width: 1800px;
+  height: 100%;
+  position: relative;
+  // border: 1px solid red;
 }
 
 button {

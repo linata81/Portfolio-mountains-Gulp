@@ -1,6 +1,75 @@
 extends ../auth.layout.pug
 
+block variables
+  - var title = 'Portfolio'
+  - var current = 'авторизация'
+  -
+   var authFrontNav = [
+     ['Мои работы','my-works.html'],
+     ['Обо мне','about.html'],
+     ['Блог', 'blog.html']
+   ]
+  -
+   var authBackNav = [
+     ['На главную','about.html'],
+     ['Войти']
+   ]
+
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  section.auth
+    .auth__bg
+      include ../common/parallax
+    .container
+
+      .auth__info-block
+
+        .info-block__back
+          .back__wrap
+            h3.back__title
+              .subtitle авторизуйтесь
+
+            .back-form
+              form(action="" method="").form.auth-form
+                .form-row
+                  .form__img
+                    +icon('login', 'icon icon_login')
+                  input(type="text" class="form__input" name="name" placeholder="Логин")
+                .form-row
+                  .form__img
+                    +icon('password', 'icon icon_password')
+                  input(type="password" class="form__input" name="pass" placeholder="Пароль")
+                .form-row.form__checkbox
+                  input(type="checkbox" class="input__checkbox" id="human" name="human" value="я человек")
+                  label(for="human" class="checkbox__label") Я человек
+                span.radio-text Вы точно не робот?
+                .form-row.form__radio
+                  .radio-block
+                    input(type="radio" class="input__radio" name="answer" value="да" id="input_yes")
+                    label(for="input_yes" class="radio__label") Да
+                  .radio-block
+                    input(type="radio" class="input__radio" name="answer" value="Не уверен" id="input_no")
+                    label(for="input_no" class="radio__label") Не уверен
+
+            .back__button
+              include ../common/nav
+              +nav('auth-nav', authBackNav,'', 'auth-nav__back')
+        .info-block__front
+          .front__top
+            include ../common/user
+            +user('auth')
+          .front__midle
+            include ../common/socials
+            +socials('auth', socials)
+          .front__bottom
+            include ../common/nav
+            +nav('auth-nav', authFrontNav)
+            
+      .auth__button
+        include ../common/btn
+        +btn('auth', '#', 'Авторизоваться')
+
+      .auth__copyright
+        .copyright &copy; Наталья Лысак | создано с любовью в LoftSchool | 2018
+
+
+

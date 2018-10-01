@@ -1,0 +1,63 @@
+.auth {
+  height: 100vh;
+  min-height: 900px;
+  overflow: hidden;
+}
+.auth__bg {
+  width: 100%;
+}
+.info-block__front {
+  background-color: rgba(#fff, .85);
+  @include centered();
+  width: 380px;
+  height: 406px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  /*для разворачивания блока*/
+  // transform: rotateY(180deg);
+  // backface-visibility: hidden;
+}
+.front__midle {
+  padding: 35px;
+  margin: 0 auto;
+}
+.auth__button {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+}
+.auth__copyright {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.info-block__back {
+  @include centered();
+}
+.back__wrap {
+  background-color: rgba(#fff, .85);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 380px;
+  height: 406px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  /*для разворачивания блока*/
+  transform: rotateY(180deg); 
+  backface-visibility: hidden;
+}
+.back__button {
+  align-self: flex-start;
+  margin-top: 40px;
+}
+::placeholder {
+  opacity: .5;
+}
+

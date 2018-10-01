@@ -1,4 +1,5 @@
 include ./common/_mixins
+block variables
 
 doctype html
 html(lang="en")
@@ -6,10 +7,10 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | welcome page
+    title #{title}
     link(rel="stylesheet", href="main.min.css")
   body
-    
-    block content
+    .wrapper
+      block content
 
     script(src="auth.bundle.js")

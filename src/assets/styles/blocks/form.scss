@@ -1,0 +1,150 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-row {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-top: 10px;
+  }
+}
+.form__img {
+  width: 45px;
+  height: 45px;
+  padding: 15px;
+  background-color: #f0efe9;
+}
+.form__input {
+  width: 300px;  
+  padding: 0 20px;
+  border: none;
+  outline:none;
+}
+.form__checkbox, .form__radio {
+  align-items: center;
+}
+.form__radio {
+  width: 180px;
+  justify-content: space-between;
+}
+.input__checkbox, .input__radio {
+  width: 20px;
+  height: 20px;
+  left: -9999px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+}
+.input__checkbox{
+  &:before {
+    border-radius: 2px;
+    background-color: $turquoise;
+  }
+  &:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(-45deg);
+  }
+}
+.input__radio {
+  &:before {
+    border-radius: 100%;
+    background-color: #fff;
+  }
+  &:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $turquoise;
+  }
+}
+.radio-block {
+  display: flex;
+  align-items: center;
+}
+.radio-text {
+  padding-top: 14px;
+  font-family: "roboto-bold";
+}
+.checkbox__label,.radio__label {
+  padding-left: 10px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  &:before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+}
+.checkbox__label {
+  &:before {
+    border-radius: 2px;
+    background-color: $turquoise;
+  }
+  &:after {
+    left: -16px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(-45deg);
+  }
+}
+.radio__label {
+  &:before {
+    border-radius: 100%;
+    background-color: #fff;
+    border: 1px solid rgba($grey,.2);
+  }
+  &:after {
+    left: -13px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $turquoise;
+  }
+}
+.input__checkbox:not(:checked) + .checkbox__label:after,
+.input__radio:not(:checked) + .radio__label:after {
+  opacity: 0;
+}

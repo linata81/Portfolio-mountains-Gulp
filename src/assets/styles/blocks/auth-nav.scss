@@ -1,0 +1,30 @@
+.auth-nav__list {
+  display: flex;
+}
+.auth-nav__item {
+  border-right: 2px solid rgba(#fff, .5);
+  &:last-child {
+    border-right: none;
+  }
+}
+.auth-nav__link {
+  display: block;
+  text-align: center;
+  padding: 15px 31px;
+  text-decoration: none;
+  color:#fff;
+  background-color: $turquoise;
+  &:hover {
+    background-color: $dark-turquoise;
+  }
+  &:active, &:focus {
+    background-color: rgba($grey,.2);
+  }
+}
+.auth-nav__back {
+  a {
+    width: 190px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

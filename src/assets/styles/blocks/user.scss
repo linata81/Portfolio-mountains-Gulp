@@ -1,0 +1,36 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user__photo {
+  width: 147px;
+  height: 147px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.user__photo-avatar {
+  display: block;
+  max-width: 100%;
+}
+.user__name {
+  color: #fff;
+  font-size: 35px;
+  font-family: 'roboto-medium';
+}
+.user__desk {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* section auth */
+.user__name_auth {
+  color: $text-color;
+  margin-top: -10px;
+  font-size: 28px;
+}
+.user__desk_auth{
+  color: $text-color;
+}

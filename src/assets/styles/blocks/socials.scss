@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  align-items: center;
+  // border: 1px solid orangered;
+}
+.socials__item {
+  margin-right: 27px;
+  margin-top: 2px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.socials__link {
+  opacity: .5;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.socials__auth svg {
+  fill: $turquoise;
+}

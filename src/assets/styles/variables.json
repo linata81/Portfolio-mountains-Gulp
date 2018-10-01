@@ -5,5 +5,7 @@
   "text-color": "#455a64",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
+  "turquoise" : "#00bfa5",
+  "dark-turquoise" : "#009688",
   "test" : "#000"
 }
