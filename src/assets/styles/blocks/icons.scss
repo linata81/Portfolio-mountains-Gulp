@@ -19,3 +19,22 @@
   width: 18px;
   height: 17px;
 }
+.icon-contact {
+  width: 24px;
+  height: 24px;
+  fill: $green;
+}
+.icon-contact{
+  &-envelope {
+  width: 23px;
+  height: 17px;
+  }
+  &-phone {
+  width: 21px;
+  height: 19px;
+  }
+  &-map_marker {
+  width: 19px;
+  height: 24px;
+  }
+}

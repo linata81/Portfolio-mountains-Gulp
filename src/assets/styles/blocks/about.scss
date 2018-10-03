@@ -1,0 +1,43 @@
+.container-about {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.about {
+  position: relative;
+  background: url('/assets/images/bg/about.jpg')center center no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+.about__col {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.about__col_bg_white {
+  background: $white;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.about__col_bg_beige {
+  background: $beige;
+  padding: 0 40px;
+}
+.about__title {
+  margin-right: 62px;
+}
+.about__desk {
+  max-width: 445px;
+  padding-bottom: 20px;
+}
+.about__right-title {
+  margin: 0 auto;
+}
+.about__small-desc{
+  padding-bottom: 60px;
+}
+.about__info-container {
+  padding-left: 40px;
+}

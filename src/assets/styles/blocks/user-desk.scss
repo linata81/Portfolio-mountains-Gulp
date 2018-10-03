@@ -1,0 +1,11 @@
+.user-desk, .user-desk__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-desk__pic-elem {
+  max-width: 100%;
+}
+.user-desk__text p {
+  padding-bottom: 15px;
+}
