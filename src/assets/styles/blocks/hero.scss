@@ -1,0 +1,38 @@
+.hero {
+  overflow: hidden;
+  height: 100vh;
+}
+.hero__bg {
+  height: 1300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.hero__bg-img {
+  display: block;
+  max-width: 180%;
+}
+.hero__portfolio-header {
+  @include centered(y);
+}
+.hero__section-img {
+  width: 100%;
+}
+.hero_container {
+  position: relative;
+}
+.hero__user_block {
+  @include centered();
+}
+.hero__top-left {
+  position:absolute;
+  top: 30px;
+  left: 30px;
+}
+.hero__top-right {
+  position:absolute;
+  top: 28px;
+  right: 30px;
+  display: flex;
+}

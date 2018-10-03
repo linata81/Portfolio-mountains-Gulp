@@ -16,7 +16,7 @@ block variables
    ]
 
 block content
-  section.auth
+  section.section.auth
     .auth__bg
       include ../common/parallax
     .container
@@ -27,7 +27,6 @@ block content
           .back__wrap
             h3.back__title
               .subtitle авторизуйтесь
-
             .back-form
               form(action="" method="").form.auth-form
                 .form-row
@@ -49,10 +48,10 @@ block content
                   .radio-block
                     input(type="radio" class="input__radio" name="answer" value="Не уверен" id="input_no")
                     label(for="input_no" class="radio__label") Не уверен
-
             .back__button
               include ../common/nav
               +nav('auth-nav', authBackNav,'', 'auth-nav__back')
+              
         .info-block__front
           .front__top
             include ../common/user
@@ -65,8 +64,8 @@ block content
             +nav('auth-nav', authFrontNav)
             
       .auth__button
-        include ../common/btn
-        +btn('auth', '#', 'Авторизоваться')
+        include ../common/button
+        +button('auth', '#', 'Авторизоваться')
 
       .auth__copyright
         .copyright &copy; Наталья Лысак | создано с любовью в LoftSchool | 2018

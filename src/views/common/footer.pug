@@ -1,2 +1,26 @@
+-
+ var 
+  navItems = [
+              ['Мои работы','my-works.html'],
+              ['Обо мне','about.html'],
+              ['Блог', 'blog.html'],
+              ['Авторизация','index.html']
+              ]
 footer.footer
-  h2 Copyright &copy;
+  .container.container_footer
+    .footer__row.footer__row_border_bottom
+      .footer__col
+        include ../common/nav.pug
+        +nav('footer-nav',navItems, current, 'footer_nav')
+
+      .footer__col.footer__col_justify_right
+        include ../common/socials
+        +socials('footer', socials)
+
+    .footer__row
+      .footer__col
+        .copyright.copyright_footer
+          p Я веб-разработчик из Краснодара, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
+      .footer__col.footer__col_justify_right 
+        .copyright.copyright_footer
+          p &copy; Наталья Лысак | создано с любовью в LoftSchool | 2018

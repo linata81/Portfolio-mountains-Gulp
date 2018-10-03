@@ -59,7 +59,7 @@
 .input__checkbox{
   &:before {
     border-radius: 2px;
-    background-color: $turquoise;
+    background-color: $green;
   }
   &:after {
     left: 3px;
@@ -83,7 +83,7 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: $turquoise;
+    background-color: $green;
   }
 }
 .radio-block {
@@ -116,7 +116,7 @@
 .checkbox__label {
   &:before {
     border-radius: 2px;
-    background-color: $turquoise;
+    background-color: $green;
   }
   &:after {
     left: -16px;
@@ -141,7 +141,7 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: $turquoise;
+    background-color: $green;
   }
 }
 .input__checkbox:not(:checked) + .checkbox__label:after,

@@ -1,11 +1,9 @@
 .socials {
   display: flex;
   align-items: center;
-  // border: 1px solid orangered;
 }
 .socials__item {
-  margin-right: 27px;
-  margin-top: 2px;
+  margin-right: 25px;
   &:last-child {
     margin-right: 0;
   }
@@ -18,5 +16,53 @@
 }
 
 .socials__auth svg {
-  fill: $turquoise;
+  fill: $green;
 }
+
+/*footer*/
+.socials__footer {
+  li {
+    margin-right: 10px;
+  }
+  a {
+    width: 37px;
+    height: 37px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: #fff;
+      svg {
+        fill: $grey;
+      }
+    }
+  }
+  .icon_vk {
+    width: 24px;
+    height: 14px;
+  }
+  .icon_github {
+    width: 22px;
+    height: 17px;
+  }
+  .icon_in {
+    width: 19px;
+    height: 17px;
+  } 
+}
+// .socials__footer {
+//   .icon_vk {
+//     width: 24px;
+//     height: 14px;
+//   }
+//   .icon_github {
+//     width: 22px;
+//     height: 17px;
+//   }
+//   .icon_in {
+//     width: 19px;
+//     height: 17px;
+//   }
+// }

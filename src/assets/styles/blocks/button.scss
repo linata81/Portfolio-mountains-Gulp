@@ -1,0 +1,44 @@
+.button {
+display: inline-block;
+color: #fff;
+text-decoration: none;
+padding: 17px 28px;
+border-radius: 3px;
+font-family: "roboto-medium";
+text-align: center;
+cursor: pointer;
+}
+.button_green {
+  background-color: $green;
+  &:hover {
+    background-color: $dark-green;
+    }
+  &:active, &:focus {
+    background-color: rgba($grey,.2);
+  }
+}
+.button__auth {
+  border: 1px solid #fff;
+  &:hover {
+    background-color: #fff;
+    color: $green;
+  }
+  &:active, &:focus {
+    background-color: rgba($grey,.2);
+  }
+}
+.button__my-works {
+  padding: 15px 20px 15px 50px;
+  position: relative;
+  &:before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    background: url('/assets/images/icons/svg/link.svg') center center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+}

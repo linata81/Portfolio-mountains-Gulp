@@ -1,0 +1,21 @@
+.down-arrow {
+  position: absolute;
+  z-index: 100;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
+.down-arrow_hero {
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.down-arrow_my-works {
+  position: absolute;
+  bottom: 216px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}

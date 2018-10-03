@@ -1,6 +1,6 @@
 .auth {
   height: 100vh;
-  min-height: 900px;
+  min-height: 650px;
   overflow: hidden;
 }
 .auth__bg {
@@ -52,6 +52,9 @@
   /*для разворачивания блока*/
   transform: rotateY(180deg); 
   backface-visibility: hidden;
+}
+.back__title {
+  text-align: center;
 }
 .back__button {
   align-self: flex-start;

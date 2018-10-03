@@ -1,0 +1,30 @@
+.footer {
+  height: 150px;
+  background-color: $grey;
+  opacity: .85;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.container_footer {
+  align-items: stretch;
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+.footer__row_border_bottom {
+  border-bottom: 1px solid rgba(#ffffff, .1);
+}
+.footer__col {
+  display: flex;
+  flex: 1;
+  margin-left: 30px;
+}
+.footer__col_justify_right {
+  justify-content: flex-end;
+  margin-right: 30px;
+}

@@ -1,0 +1,87 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+  - var current = title
+
+block hero
+  include ../common/hero.pug
+
+block content
+  section.my-works
+    .left-triangles
+    .right-triangles
+    .container
+
+      .my-works__title
+        include ../common/title.pug
+        +title('мои работы', 'works.png')
+
+      .slider
+        .slider__info-container
+          .slider__info-title
+            .subtitle Заголовок
+            .slider__info-skills
+              span html, css, javascript
+            .slider__info-button
+              include ../common/button
+              +button('my-works button_green','#','Посмотреть сайт')
+        .slider__display
+          .slider__display-img-wrap
+            +image('content/work-1.png', 'slide__big-pic')
+        .slider__buttons
+          .slider__button
+            .slider__button-container
+              .slider__button-img-wrap
+                +image('content/work-1.png', 'slider__button-pic')
+          .slider__button.slider__button_next
+            .slider__button-container
+              .slider__button-img-wrap
+                +image('content/work-1.png', 'slider__button-pic')
+
+  section.reviews
+    .reviews__bg
+      +image('bg/reviews.jpg','reviews__bg-img')
+
+    .container
+      .reviews__title
+        +title('что обо мне говорят','about-header.png')
+
+      ul.reviews__list
+        li.reviews__item
+          .reviews__text
+            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews__author
+            .reviews__avatar
+              .reviews__avatar-pic
+                  +image('content/kovalchuk.png', 'reviews__avatar-img')
+            .reviews__author-data
+              .reviews__name Ковальчук Дмитрий
+              .reviews__record основатель Loftschool
+        li.reviews__item
+          .reviews__text
+            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+          .reviews__author
+            .reviews__avatar
+              .reviews__avatar-pic
+                  +image('content/prepod.png', 'review author', 'reviews__avatar-img')
+            .reviews__author-data
+              .reviews__name Сабанцев Владимир
+              .reviews__record преподаватель
+
+      .reviews__form-container
+        .modal-form__wrapper
+          .modal-form__bg
+          form.modal-form.modal-form_blured#blurred-form
+            .modal-form__title
+              .subtitle Связаться со мной
+            .modal-form__container
+              input(type="text" placeholder="Имя").modal-form__input
+              input(type="text" placeholder="Email").modal-form__input
+              textarea(placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+            .modal-form__buttons
+              button.modal-form__button Отправить
+              button.modal-form__button Очистить
+
+    a(href="#").down-arrow.down-arrow_my-works
+      img(src="assets/images/icons/svg/arrow_down.svg", alt='')

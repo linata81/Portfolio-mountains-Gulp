@@ -1,0 +1,19 @@
+.footer-nav__list {
+  display: flex;
+}
+.footer-nav__item {
+padding: 30px 40px 30px 0;
+}
+.footer-nav__link {
+  color:#fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration:underline;
+  }
+  &:active, &:focus {
+    color: $dark-green;
+  }
+}
+.footer-nav-active {
+  color: $green;
+}
