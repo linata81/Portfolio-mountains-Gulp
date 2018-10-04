@@ -28,3 +28,17 @@
     left:0;
   }
 }
+.title-user_blog {
+  padding: 50px 94px;
+  color: #fff;
+  margin: -50px 0 -45px;
+  &:after, &:before {
+    background: rgba(#fff,.2);
+  }
+  &:after {
+    right: 50px;
+  }
+  &:before {
+    left: 50px;
+  }
+}

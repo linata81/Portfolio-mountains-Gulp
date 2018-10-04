@@ -1,0 +1,30 @@
+.sidebar {
+  flex: 1;
+  padding-right: 100px;
+  padding-top: 32px;
+  position: relative;
+}
+.sidebar-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.sidebar-menu__item{
+  text-align: right;
+}
+.sidebar-menu__link {
+  display: block;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $text-color;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+.sidebar-menu-active {
+  border-right: 3px solid $green;
+  color: $green;
+}
+
+.blog__content {
+  flex: 2;
+}

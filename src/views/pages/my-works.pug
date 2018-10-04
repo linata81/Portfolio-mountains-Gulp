@@ -5,7 +5,7 @@ block variables
   - var current = title
 
 block hero
-  include ../common/hero.pug
+  include ../common/hero
 
 block content
   section.my-works
@@ -14,7 +14,7 @@ block content
     .container
 
       .my-works__title
-        include ../common/title.pug
+        include ../common/title
         +title('мои работы', 'works.png')
 
       .slider

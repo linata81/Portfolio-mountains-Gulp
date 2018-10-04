@@ -1,0 +1,69 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+  - var current = title
+  - var articles = [['Самое важное в SASS'],['Приёмы в вёрстке, без которых не обходится ни один сайт'],['Самый необходимый набор Gulp плагинов'],['Почему я выбрал Jade']]
+  - var activeArticle = 'Самое важное в SASS'
+
+block hero
+  section.section.hero
+    .hero__bg
+      +image('bg/hero.jpg','','hero__bg-img')
+    .container.hero_container
+      .hero__user_block
+        .user 
+          .user__photo
+            .user__photo-avatar
+              +image('content/user.jpg', 'user__photo-img')
+          include ../common/title
+          +title('блог','blog_header.png','title-user_blog')
+          .user__desk.user__desk_blog Статьи, которые я написала
+      .hero__top-left
+        include ../common/socials
+        +socials('hero', socials)
+      .hero__top-right
+        .hamburger-menu
+          a(href="#").hamburger-menu-link
+            .hamburger-menu-link__bars
+      a(href="#").down-arrow.down-arrow_hero
+        img(src="assets/images/icons/svg/arrow_down.svg", alt='')
+
+block content
+  section.blog
+    .left-triangles.left-triangles_blog
+    .right-triangles.right-triangles_blog
+    .container.container_blog
+      aside.sidebar
+        include ../common/nav
+        +nav('sidebar-menu', articles,activeArticle)
+
+      .blog__content
+        ul.articles
+          li.articles__item
+            .subtitle.subtitle_articles Самое важное в SASS
+            .articles__data 01 сентября 2017
+            .articles__text
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
+              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
+
+          li.articles__item
+            .subtitle.subtitle_articles Приёмы в вёрстке, без которых не обходится ни один сайт
+            .articles__data 01 сентября 2017
+            .articles__text
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
+              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
+
+          li.articles__item
+            .subtitle.subtitle_articles Самый необходимый набор Gulp плагинов
+            .articles__data 01 сентября 2017
+            .articles__text
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
+              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
+
+          li.articles__item
+            .subtitle.subtitle_articles Почему я выбрал Jade
+            .articles__data 01 сентября 2017
+            .articles__text
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
+              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
