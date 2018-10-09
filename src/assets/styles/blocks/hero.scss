@@ -1,26 +1,33 @@
 .hero {
+  width: 100%;
   overflow: hidden;
   height: 100vh;
-}
-.hero__bg {
-  height: 1300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  @include phones {
+    min-height: auto;
+    background: url('/assets/images/bg/auth.jpg')center center no-repeat;
+    background-size: cover;
+  }
 }
 .hero__bg-img {
   display: block;
-  max-width: 180%;
-}
-.hero__portfolio-header {
-  @include centered(y);
-}
-.hero__section-img {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1150px;
+  @include phones {
+    display: none;
+  }
 }
 .hero_container {
   position: relative;
+}
+.portfolio-header-img {
+  max-width: 100%;
+  display: block;
+  @include centered();
+  @include tablets {
+    display: none;
+  }
 }
 .hero__user_block {
   @include centered();
@@ -29,10 +36,18 @@
   position:absolute;
   top: 30px;
   left: 30px;
+  @include phones {
+    top: 4%;
+    left: 2%;
+  }
 }
 .hero__top-right {
   position:absolute;
   top: 28px;
   right: 30px;
   display: flex;
+  @include phones {
+    top: 3.5%;
+    right: 2%;
+  }
 }

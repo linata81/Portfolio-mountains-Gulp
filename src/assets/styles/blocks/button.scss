@@ -2,11 +2,17 @@
 display: inline-block;
 color: #fff;
 text-decoration: none;
-padding: 17px 28px;
+padding: 10px 28px;
 border-radius: 3px;
 font-family: "roboto-medium";
 text-align: center;
 cursor: pointer;
+@include tablets {
+  font-size: 16px;
+}
+@include phones {
+  font-size: 14px;
+}
 }
 .button_green {
   background-color: $green;
@@ -16,6 +22,9 @@ cursor: pointer;
   &:active, &:focus {
     background-color: rgba($grey,.2);
   }
+}
+.button_red {
+  background-color: #e34844;
 }
 .button__auth {
   border: 1px solid #fff;
@@ -40,5 +49,8 @@ cursor: pointer;
     left: 17px;
     transform: translateY(-50%);
     z-index: 20;
+  }
+  @include phones {
+    padding: 11px 20px 11px 50px;
   }
 }

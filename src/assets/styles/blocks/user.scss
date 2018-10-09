@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include phones {
+    min-width: 210px;
+  }
 }
 .user__photo {
   width: 147px;
@@ -10,6 +13,10 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 20px;
+  @include tablets {
+    width: 142px;
+    height: 142px;
+  }
 }
 .user__photo-avatar {
   display: block;
@@ -19,10 +26,19 @@
   color: #fff;
   font-size: 35px;
   font-family: 'roboto-medium';
+  @include phones {
+    font-size: 21px;
+  }
 }
 .user__desk {
   color: #fff;
   font-weight: 100;
+  @include tablets {
+    font-size: 16px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 /* section auth */

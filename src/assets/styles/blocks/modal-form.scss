@@ -4,6 +4,16 @@
   width: 380px;
   height: 437px;
   background: rgba(#fff, .85);
+  @include laptops {
+    width: 349px;
+  }
+  @include tablets {
+    height: 418px;
+  }
+  @include phones {
+    width: 300px;
+    height: 419px;
+  }
 }
 .modal-form__bg {
   position: absolute;
@@ -31,13 +41,33 @@
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
+  @include laptops {
+    width: 349px;
+  }
+  @include tablets {
+    height: 418px;
+  }
+  @include phones {
+    width: 300px;
+    height: 419px;
+  }
 }
 .modal-form__title {
   text-align: center;
   margin-top: -13px;
+  @include phones {
+    margin-top: 0;
+    padding-bottom: 15px;
+  }
 }
 .modal-form__container {
   width: 340px;
+  @include laptops {
+    width: 310px;
+  }
+  @include phones {
+    width: 260px;
+  }
 }
 .modal-form__input {
   display: block;
@@ -60,15 +90,15 @@
 .modal-form__button {
   flex: 1;
   padding: 15px;
-  background: $green;
+  background: rgba(0, 191, 165, 0.85);
   color: #fff;
   transition: .3s;
   font-weight: 600;
   border-right: 2px solid #82cfc9;
   white-space: nowrap;
-  
+ 
   &:hover {
-    background: #268b8a;
+    background: rgba(0, 191, 165, 0.3);
   }
 
   &:last-child {
@@ -76,3 +106,9 @@
   }
 }
 
+.modal-form__status {
+  width: 285px;
+  height: 115px;
+  position: absolute;
+  @include centered();
+}

@@ -1,27 +1,88 @@
-.hamburger-menu-link {
-  width: 41px;
-  height: 36px;
+.hamburger__menu {  
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($green, .87);
   display: flex;
-  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  display: none;
 }
-.hamburger-menu-link__bars {
-  &, &:before, &:after {
-      background: #fff;
-      width: 40px;
-      height: 5px;
-      border-radius:3px;
-      display: block;
+.container_hamburger-menu {
+  position: relative;
+}
+.hamburger-menu__close {
+  position:absolute;
+  top: 28px;
+  right: 30px;
+  @include phones {
+    top: 1.5%;
+    right: 2%;
   }
+}
+.hamburger-menu__wrapper-pic {
+  cursor: pointer;
+  width: 43px;
+  height: 38px;
+  @include phones {
+    width: 25px;
+    height: 25px;
+  }
+}
+.hamburger-menu__nav {
+  @include phones {
+    margin: auto;
+  }
+}
+.hamburger-nav__list {
+  padding-top: 75px;
+  @include tablets {
+    padding-top: 50%;
+  }
+  @include phones {
+    padding-top: 0;
+  }
+ 
+}
+.hamburger-nav__item {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.hamburger-nav__link {
+  color: #ffffff;
+  font-size: 63px;
+  font-family: 'bernier';
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
 
-  &:before, &:after {
-      content: "";
-      display: block;
-      position: absolute;
-  }
-  &:before {
-    top: 0;
+  &:after, &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(#ffffff,.2);
+    width: 22px;
+    height: 5px;
   }
   &:after {
-    bottom: 0;
+    right: -42px;
+  }
+  &:before {
+    left: -42px;
+  }
+  &:hover {
+    &:after, &:before {
+      background:rgba(#ffffff, 1);
+    }
+  }
+  @include tablets {
+    font-size: 49px;
+  }
+  @include phones {
+    font-size: 35px;
   }
 }

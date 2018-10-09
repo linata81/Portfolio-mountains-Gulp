@@ -14,3 +14,35 @@
       transform: translate(-50%, -50%);
     }
 }
+
+@mixin mediumDesktops {
+  @media screen and (max-width: $mediumDesktop) {
+    @content;
+  }
+}
+@mixin desktops {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin laptops {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+@mixin minWidth {
+  @media screen and (max-width: $min) {
+    @content;
+  }
+}

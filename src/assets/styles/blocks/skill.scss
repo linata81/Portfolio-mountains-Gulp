@@ -3,6 +3,10 @@
   height: 120px;
   position: relative;
   vertical-align: middle;
+  @include desktops {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .skill__figure {

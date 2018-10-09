@@ -3,10 +3,38 @@
   vertical-align: middle;
   margin-right: 40px;
   margin-bottom: 15px;
+  @include mediumDesktops {
+    margin-right: 33px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include phones {
+      margin: 0 20px 30px;
+      &:last-child {
+        margin-right: 20px;
+      }
+    }
+  }
 }
-
 .skills-list__title {
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 10px;
+  @include laptops {
+    font-size: 21px;
+  }
+}
+.skills-row {
+  @include tablets {
+    margin-bottom: 15px;
+  }
+}
+.skills-list__item-first {
+  margin-right: 0;
+  @include phones {
+    margin: 0 auto;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

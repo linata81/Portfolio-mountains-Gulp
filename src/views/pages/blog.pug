@@ -8,8 +8,7 @@ block variables
 
 block hero
   section.section.hero
-    .hero__bg
-      +image('bg/hero.jpg','','hero__bg-img')
+    +image('bg/hero.jpg','hero__bg-img')
     .container.hero_container
       .hero__user_block
         .user 
@@ -23,16 +22,16 @@ block hero
         include ../common/socials
         +socials('hero', socials)
       .hero__top-right
-        .hamburger-menu
-          a(href="#").hamburger-menu-link
-            .hamburger-menu-link__bars
+        .hamburger-menu__wrapper-pic
+          .hamburger-pic
       a(href="#").down-arrow.down-arrow_hero
         img(src="assets/images/icons/svg/arrow_down.svg", alt='')
 
 block content
   section.blog
-    .left-triangles.left-triangles_blog
-    .right-triangles.right-triangles_blog
+    .triangles.triangles_left.triangles_blog
+    .triangles.triangles_right.triangles_blog
+
     .container.container_blog
       aside.sidebar
         include ../common/nav

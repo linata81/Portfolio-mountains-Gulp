@@ -7,6 +7,9 @@
   &:last-child {
     margin-right: 0;
   }
+  @include phones {
+    margin-right: 30px;
+  }
 }
 .socials__link {
   opacity: .5;

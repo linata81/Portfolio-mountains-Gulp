@@ -11,43 +11,43 @@ block variables
    ]
   -
    var authBackNav = [
-     ['На главную','about.html'],
-     ['Войти']
+     ['На главную','#'],
+     ['Войти','#']
    ]
 
 block content
   section.section.auth
-    .auth__bg
-      include ../common/parallax
+    include ../common/parallax
     .container
 
       .auth__info-block
 
         .info-block__back
-          .back__wrap
+          .back__wrap.js-visibility
             h3.back__title
               .subtitle авторизуйтесь
             .back-form
-              form(action="" method="").form.auth-form
-                .form-row
-                  .form__img
+              form(action="" method="").auth-form
+                .auth-form__row.form__row_error
+                  .auth-form__img
                     +icon('login', 'icon icon_login')
-                  input(type="text" class="form__input" name="name" placeholder="Логин")
-                .form-row
-                  .form__img
+                  input(type="text" class="auth-form__input" name="name" placeholder="Логин")
+                .auth-form__row
+                  .auth-form__img
                     +icon('password', 'icon icon_password')
-                  input(type="password" class="form__input" name="pass" placeholder="Пароль")
-                .form-row.form__checkbox
+                  input(type="password" class="auth-form__input" name="pass" placeholder="Пароль")
+                .auth-form__row.auth-form__checkbox
                   input(type="checkbox" class="input__checkbox" id="human" name="human" value="я человек")
                   label(for="human" class="checkbox__label") Я человек
                 span.radio-text Вы точно не робот?
-                .form-row.form__radio
+                .auth-form__row.auth-form__radio
                   .radio-block
                     input(type="radio" class="input__radio" name="answer" value="да" id="input_yes")
                     label(for="input_yes" class="radio__label") Да
                   .radio-block
                     input(type="radio" class="input__radio" name="answer" value="Не уверен" id="input_no")
                     label(for="input_no" class="radio__label") Не уверен
+
             .back__button
               include ../common/nav
               +nav('auth-nav', authBackNav,'', 'auth-nav__back')
@@ -68,7 +68,8 @@ block content
         +button('auth', '#', 'Авторизоваться')
 
       .auth__copyright
-        .copyright &copy; Наталья Лысак | создано с любовью в LoftSchool | 2018
+        .copyright.copyright_auth &copy; Наталья Лысак
+        .copyright.copyright_auth | создано с любовью в LoftSchool | 2018
 
 
 

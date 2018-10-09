@@ -3,7 +3,7 @@
   font-size: 63px;
   font-family: 'bernier';
   position: relative;
-  padding: 40px 42px;
+  padding: 50px 42px;
   display: inline-block;
   text-align: center;
   background-size: contain;
@@ -26,6 +26,13 @@
   }
   &:before {
     left:0;
+  }
+  @include laptops {
+    padding: 30px 42px;
+    font-size: 49px;
+  }
+  @include phones {
+    font-size: 35px;
   }
 }
 .title-user_blog {

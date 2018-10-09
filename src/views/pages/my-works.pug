@@ -9,9 +9,10 @@ block hero
 
 block content
   section.my-works
-    .left-triangles
-    .right-triangles
-    .container
+    .triangles.triangles_left
+    .triangles.triangles_right
+
+    .container.container_my-works
 
       .my-works__title
         include ../common/title
@@ -20,24 +21,25 @@ block content
       .slider
         .slider__info-container
           .slider__info-title
-            .subtitle Заголовок
-            .slider__info-skills
-              span html, css, javascript
-            .slider__info-button
-              include ../common/button
-              +button('my-works button_green','#','Посмотреть сайт')
-        .slider__display
-          .slider__display-img-wrap
-            +image('content/work-1.png', 'slide__big-pic')
-        .slider__buttons
-          .slider__button
-            .slider__button-container
-              .slider__button-img-wrap
-                +image('content/work-1.png', 'slider__button-pic')
-          .slider__button.slider__button_next
-            .slider__button-container
-              .slider__button-img-wrap
-                +image('content/work-1.png', 'slider__button-pic')
+            .subtitle Сайт школы онлайн образования
+          .slider__info-skills
+            span html, css, javascript
+          .slider__info-button
+            include ../common/button
+            +button('my-works button_green','#','Посмотреть сайт')
+        .slider__photo-container
+          .slider__display
+            .slider__display-img-wrap
+              +image('content/work-1.png', 'slide__big-pic')
+          .slider__buttons
+            .slider__button
+              .slider__button-container
+                .slider__button-img-wrap
+                  +image('content/work-1.png', 'slider__button-pic')
+            .slider__button.slider__button_next
+              .slider__button-container
+                .slider__button-img-wrap
+                  +image('content/work-1.png', 'slider__button-pic')
 
   section.reviews
     .reviews__bg
@@ -72,7 +74,7 @@ block content
       .reviews__form-container
         .modal-form__wrapper
           .modal-form__bg
-          form.modal-form.modal-form_blured#blurred-form
+          form.modal-form
             .modal-form__title
               .subtitle Связаться со мной
             .modal-form__container
@@ -82,6 +84,13 @@ block content
             .modal-form__buttons
               button.modal-form__button Отправить
               button.modal-form__button Очистить
+            .modal-form__status
+              .status-popup.status-popup__success
+                .status-popup__message Сообщение отправлено
+                .status-popup__close.button.button_green Закрыть
+              .status-popup.status-popup__error
+                .status-popup__message Произошла ошибка
+                .status-popup__close.button.button_red Закрыть
 
     a(href="#").down-arrow.down-arrow_my-works
       img(src="assets/images/icons/svg/arrow_down.svg", alt='')

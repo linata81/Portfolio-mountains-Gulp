@@ -1,12 +1,20 @@
 .container-about {
   flex-direction: row;
   align-items: flex-start;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .about {
   position: relative;
   background: url('/assets/images/bg/about.jpg')center center no-repeat;
   background-size: cover;
   padding-bottom: 30px;
+  @include tablets {
+    background: #efeee9;
+    padding-bottom: 0;
+  }
 }
 .about__col {
   width: 50%;
@@ -14,30 +22,97 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  @include tablets {
+    width: 100%;
+  }
 }
 .about__col_bg_white {
   background: $white;
   flex-direction: row;
   justify-content: flex-end;
   padding: 20px;
+  @include mediumDesktops {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include phones {
+    padding: 0;
+  }
 }
 .about__col_bg_beige {
   background: $beige;
   padding: 0 40px;
+  @include desktops {
+    padding: 0 0 0 38px;
+  }
+  @include phones {
+  padding: 0 10px;
+  }
 }
 .about__title {
   margin-right: 62px;
+  margin-top: -62px;
+  @include desktops {
+    // margin-top: -62px;
+    margin-right: 0;
+  }
+  @include laptops {
+    margin-top: -41px;
+  }
+  @include tablets {
+    margin-top: -20px;
+  }
+  @include phones {
+    margin-top: -5px;
+  }
 }
 .about__desk {
-  max-width: 445px;
+  max-width: 444px;
   padding-bottom: 20px;
+  @include phones {
+    padding-bottom: 10px;
+  }
+}
+.user-desk__title {
+  padding-top: 30px;
+  @include phones {
+    padding-top: 10px;
+  }
+}
+.user-desk__text {
+  @include phones {
+    padding: 0 10px;
+  }
 }
 .about__right-title {
+  max-width: 240px;
   margin: 0 auto;
+  @include desktops {
+    max-width: 50%;
+  }
+  @include tablets {
+    padding-top: 35px;
+  }
+  @include phones {
+    padding-top: 15px;
+  }
 }
 .about__small-desc{
-  padding-bottom: 60px;
+  padding-bottom: 45px;
+  padding-top: 15px;
+  @include tablets {
+    padding-top: 0;
+  }
+  @include phones {
+    padding-bottom: 25px;
+  }
 }
 .about__info-container {
   padding-left: 40px;
+  @include desktops {
+    padding-left: 0;
+  }
+  @include tablets {
+    text-align: center;
+  }
 }

@@ -6,5 +6,11 @@
   "text-color": "#455a64",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "test" : "#000",
+  "mediumDesktop": "1600px",
+  "desktop": "1200px",
+  "laptop": "992px",
+  "tablet": "768px",
+  "phones": "480px",
+  "min":"320px"
 }

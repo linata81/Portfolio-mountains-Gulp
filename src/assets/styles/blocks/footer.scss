@@ -3,18 +3,27 @@
   background-color: $grey;
   opacity: .85;
   color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  @include laptops {
+    height: 234px;
+  }
 }
 .container_footer {
   align-items: stretch;
+  @include tablets {
+    text-align: center;
+  }
 }
 .footer__row {
   display: flex;
   align-items: center;
   height: 50%;
+  @include laptops {
+    flex-direction: column;
+  }
 }
 .footer__row_border_bottom {
   border-bottom: 1px solid rgba(#ffffff, .1);

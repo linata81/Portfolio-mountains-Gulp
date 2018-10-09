@@ -1,10 +1,48 @@
 .auth {
   height: 100vh;
-  min-height: 650px;
   overflow: hidden;
+  @include phones {
+    background: url('/assets/images/bg/auth.jpg')center center no-repeat;
+    background-size: cover;
+  }
+  @include phones {
+    min-height: auto;
+  }
 }
-.auth__bg {
-  width: 100%;
+.info-block__back {
+  @include centered();
+  width: 380px;
+  height: 406px;
+  border-radius: 5px;
+  overflow: hidden;
+  @include tablets {
+    width: 348px;
+    height: 396px;
+  }
+  @include phones {
+    width: 300px;
+  }
+  @include minWidth {
+    height: 350px;
+  }
+}
+.back__wrap {
+  height: 100%;
+  background-color: rgba(#fff, .85);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.back__title {
+  text-align: center;
+  padding-bottom: 15px;
+  @include minWidth {
+    padding-bottom: 0;
+  }
+}
+.back__button {
+  align-self: flex-start;
+  margin-top: 40px;
 }
 .info-block__front {
   background-color: rgba(#fff, .85);
@@ -16,51 +54,59 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-
-  /*для разворачивания блока*/
-  // transform: rotateY(180deg);
-  // backface-visibility: hidden;
+  @include tablets {
+    width: 348px;
+    height: 396px;
+  }
+  @include phones {
+    width: 300px;
+  }
+  @include minWidth {
+    height: 350px;
+  }
 }
 .front__midle {
   padding: 35px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .auth__button {
   position: absolute;
   top: 25px;
   right: 100px;
+  @include laptops {
+    right: 50px;
+  }
+  @include tablets {
+    right: 25px;
+  }
+  @include phones {
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 .auth__copyright {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%)
-}
-.info-block__back {
-  @include centered();
-}
-.back__wrap {
-  background-color: rgba(#fff, .85);
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 380px;
-  height: 406px;
-  border-radius: 5px;
-  overflow: hidden;
+  text-align: center;
+  @include phones {
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    transform: translateX(0);
+    flex-direction: column;
+  }
+}
 
-  /*для разворачивания блока*/
+/*для разворачивания блока вешаем на .back__wrap 
+или .info-block__front */
+.js-visibility {
   transform: rotateY(180deg); 
   backface-visibility: hidden;
-}
-.back__title {
-  text-align: center;
-}
-.back__button {
-  align-self: flex-start;
-  margin-top: 40px;
-}
-::placeholder {
-  opacity: .5;
 }
 

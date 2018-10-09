@@ -10,12 +10,18 @@
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  @include phones {
+    bottom: 15%;
+  }
 }
 
 
 .down-arrow_my-works {
   position: absolute;
-  bottom: 216px;
+  bottom: 66px;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
+  @include phones {
+    bottom: 36px;
+  }
 }

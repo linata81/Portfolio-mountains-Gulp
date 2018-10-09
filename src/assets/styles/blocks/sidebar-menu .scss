@@ -1,12 +1,52 @@
 .sidebar {
   flex: 1;
   padding-right: 100px;
-  padding-top: 32px;
-  position: relative;
+  padding-top: 37px;
+  @include tablets {
+    padding-right: 0;
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: $green;
+    color: #fff;
+    z-index: 10;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 40px;
+      background: $green;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      position: absolute;
+      top: 25%;
+      left: 100%;
+      cursor: pointer;
+      @include phones {
+        top: 20%;
+      }
+      @include minWidth {
+        top: 15%;
+      }
+    }
+    width: 0;
+  }
+}
+.sidebar__open {
+  width: 40%;
+  @include phones {
+    width: 80%;
+  }
 }
 .sidebar-menu {
   display: flex;
   justify-content: flex-end;
+}
+.sidebar-menu__list {
+  @include tablets {
+    margin-top: 50%;
+  }
 }
 .sidebar-menu__item{
   text-align: right;
@@ -19,10 +59,18 @@
   color: $text-color;
   text-decoration: none;
   padding: 15px 20px;
+  @include tablets {
+    color: rgba(#ffffff, .7);
+    padding-right: 30px;
+  }
 }
 .sidebar-menu-active {
   border-right: 3px solid $green;
   color: $green;
+  @include tablets {
+    border: none;
+    color: rgba(#ffffff, 1);
+  }
 }
 
 .blog__content {

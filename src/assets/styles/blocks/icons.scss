@@ -2,10 +2,18 @@
   width: 28px;
   height: 23px;
   fill: #fff;
+  @include phones {
+    width: 21px;
+    height: 19px;
+  }
 }
 .icon_vk {
   width: 33px;
   height: 20px;
+  @include phones {
+    width: 26px;
+    height: 15px;
+  }
 }
 
 .icon_login,.icon_password {

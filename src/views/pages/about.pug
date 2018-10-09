@@ -16,14 +16,13 @@ block scripts
   script(src='about.bundle.js')
 
 
-
 block hero
   include ../common/hero.pug
 
 block content
   section.about
-    .left-triangles.left-triangles_about-left
-    .right-triangles.left-triangles_about-right
+    .triangles.triangles_left.triangles_left_about
+    .triangles.triangles_right.triangles_right_about
     .container.container-about
       .about__col.about__col_bg_white
         .about__title
@@ -49,14 +48,14 @@ block content
         .about__info-container
           ul.skills-list
             each item in skills
-              li.skills-list__item
+              li.skills-list__item.skills-list__item-first
                 .skills-row
                   .skills-list__title #{item[0]}
                   ul.skills
                     each skill in item[1]
                       li.skills-list__item
                         .skill
-                          svg(viewBox="0 0 120 120" preserveAspectRatio="none" width="100" height="100").skill__figure
+                          svg(viewBox="0 0 120 120" preserveAspectRatio="none").skill__figure
                             circle(cx="60" cy="60" r="50").skill__circle.skill__circle_under
                             circle(cx="60" cy="60" r="50" ref="circle").skill__circle.skill__circle_above
                           .skill__title #{skill[0]}

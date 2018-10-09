@@ -1,6 +1,9 @@
 .auth-nav__list {
   display: flex;
 }
+.auth-nav__list {
+  overflow: hidden;
+}
 .auth-nav__item {
   border-right: 2px solid rgba(#fff, .5);
   &:last-child {
@@ -20,11 +23,30 @@
   &:active, &:focus {
     background-color: rgba($grey,.2);
   }
+  @include tablets {
+    padding: 15px 25px;
+    font-size: 16px;
+    &:last-child {
+      padding-right:26px;
+    }
+    @include phones {
+      padding: 15px 22px;
+      &:last-child {
+        padding-right:13px;
+      }
+    }
+  }
 }
 .auth-nav__back {
   a {
     width: 190px;
     padding-top: 12px;
     padding-bottom: 12px;
+    @include tablets {
+      width: 173px;
+    }
+    @include phones {
+      width: 149px;
+    }
   }
 }

@@ -2,3 +2,12 @@
   background-color: #faf8f0;
   position: relative;
 }
+.container_my-works {
+  width: 100%;
+}
+.my-works__title {
+  padding: 10px;
+  @include phones {
+    padding: 0;
+  }
+}

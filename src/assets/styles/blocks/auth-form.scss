@@ -1,12 +1,14 @@
-.form {
+.auth-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-.form-row {
+.auth-form__row {
   display: flex;
   border-radius: 5px;
-  overflow: hidden;
+  position: relative;
+  // overflow: hidden;
   margin-top: 20px;
   &:first-child {
     margin-top: 0;
@@ -15,22 +17,28 @@
     margin-top: 10px;
   }
 }
-.form__img {
+.auth-form__img {
   width: 45px;
   height: 45px;
   padding: 15px;
   background-color: #f0efe9;
 }
-.form__input {
+.auth-form__input {
   width: 300px;  
   padding: 0 20px;
   border: none;
   outline:none;
+  @include tablets {
+    width: 264px;
+  }
+  @include phones {
+    width: 215px;
+  }
 }
-.form__checkbox, .form__radio {
+.auth-form__checkbox, .auth-form__radio {
   align-items: center;
 }
-.form__radio {
+.auth-form__radio {
   width: 180px;
   justify-content: space-between;
 }
@@ -95,7 +103,7 @@
   font-family: "roboto-bold";
 }
 .checkbox__label,.radio__label {
-  padding-left: 10px;
+  padding-left: 11px;
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -137,9 +145,9 @@
   }
   &:after {
     left: -13px;
-    top: 6px;
+    top: 7px;
     width: 10px;
-    height: 10px;
+    height: 9px;
     border-radius: 100%;
     background-color: $green;
   }
@@ -147,4 +155,23 @@
 .input__checkbox:not(:checked) + .checkbox__label:after,
 .input__radio:not(:checked) + .radio__label:after {
   opacity: 0;
+}
+
+.error {
+  input {
+    border:1px solid #e34844;
+    border-radius: 3px;
+  }
+  svg {
+    fill:#e34844;
+  }
+}
+.success {
+  input {
+    border:1px solid $green;
+    border-radius: 3px;
+  }
+  svg {
+    fill:$green;
+  }
 }
