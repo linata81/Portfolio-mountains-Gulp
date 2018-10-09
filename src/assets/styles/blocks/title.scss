@@ -34,6 +34,10 @@
   @include phones {
     font-size: 35px;
   }
+  @include minWidth {
+    font-size: 29px;
+  }
+  
 }
 .title-user_blog {
   padding: 50px 94px;

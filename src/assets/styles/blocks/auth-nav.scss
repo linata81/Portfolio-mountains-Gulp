@@ -1,9 +1,6 @@
 .auth-nav__list {
   display: flex;
 }
-.auth-nav__list {
-  overflow: hidden;
-}
 .auth-nav__item {
   border-right: 2px solid rgba(#fff, .5);
   &:last-child {
@@ -13,7 +10,7 @@
 .auth-nav__link {
   display: block;
   text-align: center;
-  padding: 15px 31px;
+  padding: 11px 31px;
   text-decoration: none;
   color:#fff;
   background-color: $green;
@@ -24,15 +21,14 @@
     background-color: rgba($grey,.2);
   }
   @include tablets {
-    padding: 15px 25px;
-    font-size: 16px;
+    padding: 11px 25px;
     &:last-child {
-      padding-right:26px;
+      padding-right: 26px;
     }
     @include phones {
-      padding: 15px 22px;
+      padding: 11px 21px;
       &:last-child {
-        padding-right:13px;
+        padding-right: 22px;
       }
     }
   }

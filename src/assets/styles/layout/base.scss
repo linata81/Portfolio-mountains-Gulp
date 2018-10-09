@@ -35,9 +35,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // @include laptops {
-  //   min-height: auto;
-  // }
+  @include laptops {
+    min-height: auto;
+  }
 }
 
 .container {
