@@ -20,6 +20,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include laptops {
+    position: absolute;
+    bottom: 465px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 270px;
+  }
   @include tablets {
     position: absolute;
     bottom: 215px;
@@ -40,9 +47,7 @@
   @include phones {
    justify-content: flex-end;
   }
-  // @include minWidth {
-  //  justify-content: flex-end;
-  // }
+
 }
 .slider__display {
   background: #efebe0;
@@ -50,6 +55,11 @@
   align-items: center;
   justify-content: center;
   height: 70%;
+  @include laptops {
+    height: 955px;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
   @include tablets {
     height: 803px;
     align-items: flex-start;

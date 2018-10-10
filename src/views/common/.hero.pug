@@ -1,19 +1,17 @@
 section.section.hero
-  .hero__bg
-    +image('bg/hero.jpg','hero__bg-img')
-  .hero__portfolio-bg
-    +image('content/portfolio.png','portfolio-header-img')
+  +image('bg/hero.jpg','hero__bg-img')
 
   .container.hero_container
+    +image('content/portfolio.png','portfolio-header-img')
+
     .hero__user_block
-      .user-block__position
-        include ../common/user.pug
-        +user('hero')
+      include ../common/user.pug
+      +user('hero')
 
     .hero__top-left
       include ../common/socials
       +socials('hero', socials)
-
+              
 
     .hero__top-right
       .hamburger-menu__wrapper-pic

@@ -1,4 +1,5 @@
 import "./modules/example";
+import "./modules/hero";
 
 (function () {
 

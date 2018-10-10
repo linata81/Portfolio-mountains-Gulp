@@ -21,7 +21,7 @@ const moveLayers = e => {
 window.addEventListener('mousemove', moveLayers);
 
 
-// console.log(initialX,initialY);
+
 
 
 

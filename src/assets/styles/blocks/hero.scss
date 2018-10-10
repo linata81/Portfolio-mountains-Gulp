@@ -1,5 +1,4 @@
 .hero {
-  width: 100%;
   overflow: hidden;
   height: 100vh;
   @include phones {
@@ -8,28 +7,54 @@
     background-size: cover;
   }
 }
-.hero__bg-img {
-  display: block;
+.hero__bg {
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -1150px;
+  left: 0;
   @include phones {
     display: none;
   }
 }
-.hero_container {
-  position: relative;
-}
-.portfolio-header-img {
-  max-width: 100%;
+.hero__bg-img {
   display: block;
-  @include centered();
+  width: 120%;
+  margin-left: -180px;
+  @include desktops {
+    width: 145%;
+    margin-left: -272px;
+  }
+  @include laptops {
+    width: 288%;
+    margin-left: -977px;
+  }
   @include tablets {
-    display: none;
+    width: 296%;
+    margin-left: -757px;
   }
 }
+.hero__portfolio-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.portfolio-header-img {
+  display: block;
+  @include centered();
+  max-width: 100%;
+}
+.hero_container {
+  @include centered();
+}
 .hero__user_block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.user-block__position {
   @include centered();
 }
 .hero__top-left {

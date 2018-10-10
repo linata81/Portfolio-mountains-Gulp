@@ -6,26 +6,33 @@ block variables
   - var articles = [['Самое важное в SASS'],['Приёмы в вёрстке, без которых не обходится ни один сайт'],['Самый необходимый набор Gulp плагинов'],['Почему я выбрал Jade']]
   - var activeArticle = 'Самое важное в SASS'
 
+block scripts
+  script(src='blog.bundle.js')
+
 block hero
   section.section.hero
-    +image('bg/hero.jpg','hero__bg-img')
+    .hero__bg
+      +image('bg/hero.jpg','hero__bg-img')
+
     .container.hero_container
       .hero__user_block
-        .user 
-          .user__photo
-            .user__photo-avatar
-              +image('content/user.jpg', 'user__photo-img')
-          include ../common/title
-          +title('блог','blog_header.png','title-user_blog')
-          .user__desk.user__desk_blog Статьи, которые я написала
-      .hero__top-left
-        include ../common/socials
-        +socials('hero', socials)
-      .hero__top-right
-        .hamburger-menu__wrapper-pic
-          .hamburger-pic
-      a(href="#").down-arrow.down-arrow_hero
-        img(src="assets/images/icons/svg/arrow_down.svg", alt='')
+        .user-block__position
+          .user 
+            .user__photo
+              .user__photo-avatar
+                +image('content/user.jpg', 'user__photo-img')
+            include ../common/title
+            +title('блог','blog_header.png','title-user_blog')
+            .user__desk.user__desk_blog Статьи, которые я написала
+
+    .hero__top-left
+      include ../common/socials
+      +socials('hero', socials)
+    .hero__top-right
+      .hamburger-menu__wrapper-pic
+        .hamburger-pic
+    a(href="#").down-arrow.down-arrow_hero
+      img(src="assets/images/icons/svg/arrow_down.svg", alt='')
 
 block content
   section.blog

@@ -9,7 +9,7 @@
   "test" : "#000",
   "mediumDesktop": "1600px",
   "desktop": "1200px",
-  "laptop": "992px",
+  "laptop": "1024px",
   "tablet": "768px",
   "phones": "480px",
   "min":"320px"
