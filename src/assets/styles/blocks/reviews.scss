@@ -12,13 +12,13 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   min-width: 2000px;
   @include laptops {
-    min-width: 1400px;
+    top:-180px;
   }
   @include phones {
-    top: -2%;
+    top: -85px;
   }
 }
 .reviews__bg-img {

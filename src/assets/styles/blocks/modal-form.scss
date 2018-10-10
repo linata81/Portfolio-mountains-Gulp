@@ -4,6 +4,8 @@
   width: 380px;
   height: 437px;
   background: rgba(#fff, .85);
+  z-index: -1;
+  overflow: hidden;
   @include laptops {
     width: 349px;
   }
@@ -21,11 +23,18 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
   filter: blur(20px);
   background-image: url('/assets/images/bg/reviews.jpg');
-  background-size: 1900px;
+  background-size: 2000px;
   background-repeat: no-repeat;
-  background-position: -756px -515px;
+  background-position: -697px -512px;
+  @include laptops {
+    top:-180px;
+  }
+  @include phones {
+    top: -85px;
+  }
 }
 .modal-form {
   position: absolute;
