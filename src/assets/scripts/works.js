@@ -1,4 +1,4 @@
-import "./modules/hero";
+import './modules/hero';
 
 var blur = (function(){
   var wrapper = document.querySelector('.modal-form__wrapper'),
@@ -22,5 +22,6 @@ blur.set();
 window.onresize = function(){
   blur.set();
 }
+
 
 

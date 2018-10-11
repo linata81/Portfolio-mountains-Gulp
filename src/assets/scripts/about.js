@@ -1,4 +1,4 @@
-import "./modules/example";
+import "./modules/skills";
 import "./modules/hero";
 
 (function () {
@@ -11,4 +11,6 @@ import "./modules/hero";
   }
 
 })();
+
+
 

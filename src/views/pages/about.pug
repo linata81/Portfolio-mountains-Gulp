@@ -3,7 +3,6 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
   - var current = title
-  - var skills =[['Frontend',[['HTML5', 30],['CSS3', 50],['JavaScript & jQuerry', 70]]],['Backend',[['PHP', 30],['mySQL', 40],['Node.js & npm', 30],['Mongo.db', 30]]],['WorkFlow',[['Git',50],['Gulp',70],['Bower',10]]]]
   -
     var contacts = [
                    ['skype', 'skype_kdn'],
@@ -14,7 +13,6 @@ block variables
 
 block scripts
   script(src='about.bundle.js')
-
 
 block hero
   include ../common/hero.pug
@@ -46,20 +44,7 @@ block content
           p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
 
         .about__info-container
-          ul.skills-list
-            each item in skills
-              li.skills-list__item.skills-list__item-first
-                .skills-row
-                  .skills-list__title #{item[0]}
-                  ul.skills
-                    each skill in item[1]
-                      li.skills-list__item
-                        .skill
-                          svg(viewBox="0 0 120 120" preserveAspectRatio="none").skill__figure
-                            circle(cx="60" cy="60" r="50").skill__circle.skill__circle_under
-                            circle(cx="60" cy="60" r="50" ref="circle").skill__circle.skill__circle_above
-                          .skill__title #{skill[0]}
-
+          #skills-component
 
   section.map
     .google-map
