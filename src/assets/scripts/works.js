@@ -1,4 +1,5 @@
 import './modules/hero';
+import './modules/slider';
 
 var blur = (function(){
   var wrapper = document.querySelector('.modal-form__wrapper'),

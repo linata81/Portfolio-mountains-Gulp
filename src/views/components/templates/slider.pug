@@ -1,0 +1,37 @@
+script(type="text/x-template")#slider-root
+  .slider
+    info(
+      :work="currentWork"
+    )
+    display(
+      :work="currentWork"
+    )
+    btns(
+      @slide="handleSlide"
+      :index="currentIndex"
+      :works="works"
+    )
+
+script(type="text/x-template")#slider-info
+  .slider__info-container
+    .slider__info-title
+      .subtitle {{work.title}}
+    .slider__info-skills {{work.skills}}
+    .slider__info-button
+      a(:href="work.link", target="_blank").button.button__my-works.button_green Посмотреть сайт
+
+script(type="text/x-template")#slider-display
+  .slider__display
+    .slider__display-img-wrap
+      img(:src="work.photo", alt='', class='slider__big-pic')
+
+script(type="text/x-template")#slider-btns
+  .slider__buttons
+    .slider__button(@click="slide('prev')")
+      .slider__button-container
+        .slider__button-img-wrap
+          img(:src="prevButtonWorks[index].photo", alt='', class='slider__button-pic')
+    .slider__button.slider__button_next(@click="slide('next')")
+      .slider__button-container
+        .slider__button-img-wrap
+          img(:src="nextButtonWorks[index].photo", alt='', class='slider__button-pic')

@@ -2,64 +2,99 @@
   height: 100vh;
   width: 100%;
   background: #f0efe9;
-  display: grid;
-  grid-template: 
-    "info display" 70%
-    "info buttons" 30%
-    / 1fr 1fr;
-
-  @include laptops {
-    grid-template: 
-      "display" 52%
-      "info" 27%
-      "buttons" 21%
-      / 1fr;
+  display: flex;
+  position: relative;
+  @include tablets {
+    height: 100%;
   }
   @include phones {
-    min-height: auto;
-    grid-template: 
-    "display" 45%
-    "info" 38%
-    "buttons" 17%
-    / 1fr;
+    height: 100%;
+  }
+  @include minWidth {
+    height: 100vh;
   }
 }
 .slider__info-container {
-  grid-area: info;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include laptops {
+    position: absolute;
+    bottom: 465px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 270px;
+  }
+  @include tablets {
+    position: absolute;
+    bottom: 215px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 270px;
+  }
+  @include phones {
+    bottom: 93px;
+    height: 220px;
+    width: 100%;
+  }
+}
+.slider__photo-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @include phones {
+   justify-content: flex-end;
+  }
+
 }
 .slider__display {
-  grid-area: display;
   background: #efebe0;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 70%;
+  @include laptops {
+    height: 955px;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+  @include tablets {
+    height: 803px;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+  @include phones {
+    height: 476px;
+    padding-top: 50px;
+  }
 }
 .slider__big-pic {
-  width: 100%;
+  max-width: 100%;
 }
 .slider__buttons {
-  grid-area: buttons;
   display: flex;
+  height: 30%;
   user-select: none;
   overflow: hidden;
+  @include tablets {
+    height: 215px;
+  }
+  @include phones {
+    height: 93px;
+  }
 }
 /* slider__info */
 .slider__info-title {
   text-align: center;
-  width: 290px;
-  margin-bottom: 15px;
-  @include laptops {
-    width: 100%;
-  }
+  width: 263px;
+  margin-bottom: 20px;
   @include tablets {
     width: 100%;
   }
   @include phones {
-    width: 55%;
+    width: 194px;
     margin-bottom: 5px;
   }
 }
@@ -71,9 +106,11 @@
   text-align: center;
   color: $green;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  font-size: 14px;
-  display: inline-block;
+  margin-bottom: 40px;
+  span {
+    font-size: 14px;
+    display: inline-block;
+  }
   @include phones {
     padding: 10px 0;
     margin-bottom: 20px;
@@ -88,13 +125,6 @@
 .slider__display-img-wrap {
   max-width: 67%;
   max-height: 80%;
-  @include laptops {
-    margin-top: -25px;
-  }
-  @include phones {
-    max-width: 90%;
-    margin-top: 0;
-  }
 }
 .slide__big-pic {
   display: block;

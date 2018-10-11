@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "1 Сайт школы онлайн образования",
+    "skills": "1 html, css, javascript",
+    "photo": "/assets/images/content/work-1.png",
+    "link": "//google.com"
+  },
+  {
+    "id": 2,
+    "title": "2 Сайт школы онлайн образования",
+    "skills": "2 html, css, javascript",
+    "photo": "/assets/images/content/work-2.png",
+    "link": "//yandex.ru"
+  },
+  {
+    "id": 3,
+    "title": "3 Сайт школы онлайн образования",
+    "skills": "3 html, css, javascript",
+    "photo": "/assets/images/content/work-3.png",
+    "link": "//rambler.ru"
+  },
+  {
+    "id": 4,
+    "title": "4 Сайт школы онлайн образования",
+    "skills": "4 html, css, javascript",
+    "photo": "/assets/images/content/work-4.png",
+    "link": "//vk.com"
+  }
+]

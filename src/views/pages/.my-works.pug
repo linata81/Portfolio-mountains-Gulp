@@ -22,6 +22,28 @@ block content
         +title('мои работы', 'works.png')
 
       #slider-component
+      //- .slider
+      //-   .slider__info-container
+      //-     .slider__info-title
+      //-       .subtitle Сайт школы онлайн образования
+      //-     .slider__info-skills
+      //-       span html, css, javascript
+      //-     .slider__info-button
+      //-       include ../common/button
+      //-       +button('my-works button_green','#','Посмотреть сайт')
+      //-   .slider__photo-container
+      //-     .slider__display
+      //-       .slider__display-img-wrap
+      //-         +image('content/work-1.png', 'slide__big-pic')
+      //-     .slider__buttons
+            .slider__button
+              .slider__button-container
+                .slider__button-img-wrap
+                  +image('content/work-1.png', 'slider__button-pic')
+            .slider__button.slider__button_next
+              .slider__button-container
+                .slider__button-img-wrap
+                  +image('content/work-1.png', 'slider__button-pic')
 
   section.reviews
     .reviews__bg
@@ -52,7 +74,6 @@ block content
             .reviews__author-data
               .reviews__name Сабанцев Владимир
               .reviews__record преподаватель
-
 
       .reviews__form-container
         .modal-form__wrapper
