@@ -12,5 +12,5 @@
   "laptop": "1024px",
   "tablet": "768px",
   "phones": "480px",
-  "min":"320px"
+  "iPhone5":"320px"
 }

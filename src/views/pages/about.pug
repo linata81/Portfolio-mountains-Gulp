@@ -47,9 +47,8 @@ block content
           #skills-component
 
   section.map
-    .google-map
-      #map
-
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ&callback=initMap" async defer)
+    .map__google#map
     .map__data
       .contacts
         .contacts__title

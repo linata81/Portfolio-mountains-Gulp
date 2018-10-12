@@ -1,7 +1,9 @@
 .map {
-  height:100vh;
-  background: #8cabce;
   position: relative;
+  min-height: 600px;
+  @include phones {
+    min-height: auto;
+  }
 }
 
 .map__data {
@@ -15,4 +17,8 @@
     right: 0;
     transform: translate(0,0);
   }
+}
+#map {
+  width: 100%;
+  height:100vh;
 }

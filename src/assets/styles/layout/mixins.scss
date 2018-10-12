@@ -42,7 +42,7 @@
   }
 }
 @mixin minWidth {
-  @media screen and (max-width: $min) {
+  @media screen and (max-width: $iPhone5) {
     @content;
   }
 }

@@ -1,5 +1,6 @@
 import "./modules/skills";
 import "./modules/hero";
+import "./modules/map";
 
 (function () {
 
@@ -9,7 +10,6 @@ import "./modules/hero";
   menuWrapper.onclick = function () {
     hamburger.classList.toggle('animate');
   }
-
 })();
 
 

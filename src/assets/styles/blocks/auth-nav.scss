@@ -1,10 +1,14 @@
 .auth-nav__list {
   display: flex;
+  width: 100%;
 }
 .auth-nav__item {
   border-right: 2px solid rgba(#fff, .5);
   &:last-child {
     border-right: none;
+    @include phones {
+      border-right: 1px solid $green;
+    }
   }
 }
 .auth-nav__link {
@@ -21,15 +25,16 @@
     background-color: rgba($grey,.2);
   }
   @include tablets {
-    padding: 11px 25px;
     &:last-child {
-      padding-right: 26px;
+      padding-right: 29px;
+      padding-left: 30px;
     }
-    @include phones {
-      padding: 11px 21px;
-      &:last-child {
-        padding-right: 22px;
-      }
+  }
+  @include phones {
+    padding: 11px 20px;
+    &:last-child {
+      padding-right: 22px;
+      padding-left: 21px;
     }
   }
 }
