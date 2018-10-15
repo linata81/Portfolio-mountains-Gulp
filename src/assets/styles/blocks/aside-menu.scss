@@ -1,0 +1,80 @@
+.aside-menu {
+  width: 30%;
+  position: sticky;
+  top: 0;
+  padding-right: 100px;
+  padding-top: 68px;
+  @include desktops {
+    width: 32%;
+    padding-right: 77px;
+  }
+  @include laptops {
+    padding-right: 50px;
+  } 
+  @include tablets {
+    width: 40%;
+    padding-right: 0;
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: $green;
+    color: #fff;
+    z-index: 10;
+  }
+  @include phones {
+    width: 80%;
+  }
+}
+.aside-menu__list {
+  display: flex;
+  flex-direction: column;
+    @include tablets {
+      padding-top: 30%;
+      position: sticky;
+      top: 0;
+      &:after {
+        content: "";
+        width: 20px;
+        height: 40px;
+        background: $green;
+        border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+        position: absolute;
+        top: 48%;
+        left: 100%;
+        cursor: pointer;
+      }
+    }
+}
+.aside-menu__item{
+  text-align: right;
+}
+.aside-menu__btn {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $text-color;
+  background: transparent;
+  padding: 15px 20px 15px 0;
+  text-align: right;
+  @include tablets {
+    color: rgba(#ffffff, .7);
+    padding-right: 30px;
+  }
+}
+.aside-menu__btn-active {
+  border-right: 3px solid $green;
+  color: $green;
+  @include tablets {
+    border: none;
+    color: rgba(#ffffff, 1);
+  }
+}
+
+.js-aside-close {
+  width: 0;
+  .aside-menu__btn {
+    opacity: 0;
+  }
+}

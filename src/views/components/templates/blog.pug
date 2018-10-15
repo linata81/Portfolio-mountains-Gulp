@@ -1,0 +1,22 @@
+script(type="text/x-template")#blog-root
+  .blog-content
+    asideMenu(
+      :articles = "articles"
+    )
+    articles(
+      :articles = "articles"
+    )
+
+script(type="text/x-template")#blog-asideMenu
+  aside.aside-menu.js-aside-menu
+    ul.aside-menu__list.js-menu-list
+      li.aside-menu__item.js-scroll-article(v-for="articles in articles")
+        button.aside-menu__btn(type='button') {{articles.title}}
+
+
+script(type="text/x-template")#blog-articles
+  .blog__articles.js-articles
+    article.article.js-article(v-for="articles in articles")
+      .subtitle.subtitle_article {{articles.title}}
+      time.article__date {{articles.date}}
+      .article__text {{articles.text}}

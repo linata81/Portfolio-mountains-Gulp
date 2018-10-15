@@ -3,8 +3,6 @@ extends ../main.layout.pug
 block variables
   - var title = 'Блог'
   - var current = title
-  - var articles = [['Самое важное в SASS'],['Приёмы в вёрстке, без которых не обходится ни один сайт'],['Самый необходимый набор Gulp плагинов'],['Почему я выбрал Jade']]
-  - var activeArticle = 'Самое важное в SASS'
 
 block scripts
   script(src='blog.bundle.js')
@@ -40,36 +38,4 @@ block content
     .triangles.triangles_right.triangles_blog
 
     .container.container_blog
-      aside.sidebar
-        include ../common/nav
-        +nav('sidebar-menu', articles,activeArticle)
-
-      .blog__content
-        ul.articles
-          li.articles__item
-            .subtitle.subtitle_articles Самое важное в SASS
-            .articles__data 01 сентября 2017
-            .articles__text
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
-              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
-
-          li.articles__item
-            .subtitle.subtitle_articles Приёмы в вёрстке, без которых не обходится ни один сайт
-            .articles__data 01 сентября 2017
-            .articles__text
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
-              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
-
-          li.articles__item
-            .subtitle.subtitle_articles Самый необходимый набор Gulp плагинов
-            .articles__data 01 сентября 2017
-            .articles__text
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
-              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
-
-          li.articles__item
-            .subtitle.subtitle_articles Почему я выбрал Jade
-            .articles__data 01 сентября 2017
-            .articles__text
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto officiis est soluta amet incidunt temporibus dolor quasi praesentium repellendus. Tenetur magnam beatae explicabo ducimus. Nesciunt adipisci, vero deleniti eius nam minus qui blanditiis aliquam.
-              p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum temporibus vel iusto eos laborum accusantium corporis, odio ullam placeat magni? Architecto, tenetur ducimus qui minus assumenda harum dolores.
+      #blog-component

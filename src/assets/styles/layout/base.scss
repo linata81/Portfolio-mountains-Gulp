@@ -14,20 +14,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .wrapper {
-  overflow: hidden;
   width: 100%;
   min-height: 100%;
   position: relative;
 }
 .maincontent {
   height: 100%;
-  overflow: hidden;
   transition: transform 1s;
   will-change: transform;
 }
 .section {
   height: 100%;
-  min-height: 650px;
+  min-height: 600px;
   overflow: hidden;
   margin: 0;
   padding: 0;

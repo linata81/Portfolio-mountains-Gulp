@@ -2,11 +2,9 @@
   position: relative;
 }
 .container_blog {
-  flex-direction: row;
-  align-items: stretch;
-  position: relative;
   width: 100%;
 }
-.blog__content {
-  padding: 0 25px;
+.blog-content {
+  display: flex;
+  align-items: flex-start;
 }
