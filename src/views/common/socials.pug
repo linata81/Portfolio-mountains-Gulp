@@ -8,7 +8,7 @@ mixin socials(mod,content)
   ul(class="socials socials__" + mod)
     each item in content
       li.socials__item
-        a(class=`socials__link socials__link_${item[0]}` href=`${item[1]}`,target="_blank")
+        a(class=`socials__link socials__link_${item[0]}` href=`${item[1]}` target="_blank")
           svg(class=`icon icon_${item[0]}`)
             use(xlink:href=`assets/images/icons/sprite.svg#${item[0]}`)
 

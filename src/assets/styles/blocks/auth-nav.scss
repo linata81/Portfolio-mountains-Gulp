@@ -14,10 +14,13 @@
 .auth-nav__link {
   display: block;
   text-align: center;
-  padding: 11px 31px;
+  padding: 11px 31px 12px 31px;
   text-decoration: none;
   color:#fff;
   background-color: $green;
+  &:last-child {
+    padding-right: 31px;
+  }
   &:hover {
     background-color: $dark-green;
   }

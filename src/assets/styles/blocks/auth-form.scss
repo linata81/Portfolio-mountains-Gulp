@@ -1,17 +1,8 @@
 .auth-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
-  @include laptops {
-    padding-bottom: 36px;
-  }
-  @include tablets {
-    padding-bottom: 40px;
-  }
-  @include minWidth {
-    padding-bottom: 15px;
-  }
 }
 .auth-form__row {
   display: flex;
@@ -180,7 +171,13 @@
   opacity: 0;
 }
 
-.error {
+.auth-form__button {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.authError {
   input {
     border:1px solid #e34844;
     border-radius: 3px;
@@ -188,8 +185,11 @@
   svg {
     fill:#e34844;
   }
+  label {
+    color: #e34844;
+  }
 }
-.success {
+.authSuccess {
   input {
     border:1px solid $green;
     border-radius: 3px;

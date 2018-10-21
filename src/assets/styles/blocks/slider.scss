@@ -38,9 +38,6 @@
   align-items: center;
   justify-content: center;
 }
-.slider__big-pic {
-  width: 100%;
-}
 .slider__buttons {
   grid-area: buttons;
   display: flex;
@@ -86,19 +83,16 @@
 
 /* slider__display */
 .slider__display-img-wrap {
-  max-width: 67%;
-  max-height: 80%;
-  @include laptops {
-    margin-top: -25px;
-  }
-  @include phones {
-    max-width: 90%;
-    margin-top: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.slide__big-pic {
+.slider__big-pic {
   display: block;
   width: 100%;
+  @include mediumDesktops {
+    width: 90%;
+  }
 }
 
 /* slider__button */

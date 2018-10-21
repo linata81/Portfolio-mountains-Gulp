@@ -58,6 +58,7 @@
   background: transparent;
   padding: 15px 20px 15px 0;
   text-align: right;
+  outline: none;
   @include tablets {
     color: rgba(#ffffff, .7);
     padding-right: 30px;
@@ -65,10 +66,14 @@
 }
 .aside-menu__btn-active {
   border-right: 3px solid $green;
-  color: $green;
+  button {
+    color: $green;
+  }
   @include tablets {
     border: none;
-    color: rgba(#ffffff, 1);
+    button {
+      color: rgba(#ffffff, 1);
+    }
   }
 }
 

@@ -1,8 +1,7 @@
 .about {
   height: 100%;
   position: relative;
-  background: url('/assets/images/bg/about.jpg')center center no-repeat;
-  background-size: cover;
+  background: linear-gradient(to right, #efeee9 50%, #eeebdf 50%);
   padding-bottom: 30px;
   @include tablets {
     background: #efeee9;

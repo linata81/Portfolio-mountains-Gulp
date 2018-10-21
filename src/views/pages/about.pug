@@ -46,8 +46,8 @@ block content
         .about__info-container
           #skills-component
 
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ")
   section.map
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ&callback=initMap" async defer)
     .map__google#map
     .map__data
       .contacts
@@ -71,7 +71,6 @@ block content
                       a(href="mailto:linata81@gmail.com" class="contacts__link") #{item[1]}
                   else
                     .contacts__desk.contacts-row #{item[1]}
-
 
 
 

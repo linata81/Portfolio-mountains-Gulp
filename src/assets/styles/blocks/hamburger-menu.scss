@@ -1,88 +1,73 @@
-.hamburger__menu {  
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba($green, .87);
-  display: flex;
-  justify-content: center;
-  z-index: 5000;
-  display: none;
-}
-.container_hamburger-menu {
-  position: relative;
-}
-.hamburger-menu__close {
-  position:absolute;
-  top: 28px;
-  right: 30px;
-  @include phones {
-    top: 1.5%;
-    right: 2%;
-  }
-}
-.hamburger-menu__wrapper-pic {
+$bar-width: 40px;
+$bar-height: 5px;
+$bar-spacing: 15px;
+
+.hamburger-menu {
   cursor: pointer;
   width: 43px;
   height: 38px;
+  z-index: 15000;
+  position:absolute;
+  top: 28px;
+  right: 30px;
+  display: flex;
   @include phones {
     width: 25px;
     height: 25px;
+    top: 15px;
+    right: 2.5%;
   }
 }
-.hamburger-menu__nav {
-  @include phones {
-    margin: auto;
-  }
-}
-.hamburger-nav__list {
-  padding-top: 75px;
-  @include tablets {
-    padding-top: 50%;
-  }
-  @include phones {
-    padding-top: 0;
-  }
- 
-}
-.hamburger-nav__item {
-  text-align: center;
-  margin-bottom: 45px;
-}
-.hamburger-nav__link {
-  color: #ffffff;
-  font-size: 63px;
-  font-family: 'bernier';
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
 
-  &:after, &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(#ffffff,.2);
-    width: 22px;
-    height: 5px;
-  }
-  &:after {
-    right: -42px;
-  }
-  &:before {
-    left: -42px;
-  }
-  &:hover {
-    &:after, &:before {
-      background:rgba(#ffffff, 1);
-    }
-  }
-  @include tablets {
-    font-size: 49px;
-  }
+.hamburger-pic,
+.hamburger-pic:after,
+.hamburger-pic:before {
+  width: $bar-width;
+  height: $bar-height;
+  border-radius: 3px;
   @include phones {
-    font-size: 35px;
+    width: 25px;
   }
+}
+.hamburger-pic {
+  position: relative;
+  transform: translateY($bar-spacing);
+  background: rgba(255, 255, 255, 1);
+  transition: all 0ms 300ms;
+
+  &.animate {
+    background: rgba(255, 255, 255, 0); 
+  }
+}
+.hamburger-pic:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  @include phones {
+    bottom: 10px;
+  } 
+}
+.hamburger-pic:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  @include phones {
+    top: 10px;
+  }
+}
+.hamburger-pic.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+.hamburger-pic.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }

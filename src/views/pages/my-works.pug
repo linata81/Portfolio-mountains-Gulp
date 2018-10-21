@@ -56,16 +56,16 @@ block content
       .reviews__form-container
         .modal-form__wrapper
           .modal-form__bg
-          form.modal-form
+          form.modal-form(action="send.php" method="POST" @submit="validator")
             .modal-form__title
               .subtitle Связаться со мной
             .modal-form__container
-              input(type="text" placeholder="Имя").modal-form__input
-              input(type="text" placeholder="Email").modal-form__input
-              textarea(placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+              input(type="text" name="name" placeholder="Имя" @focus="clearBorderName").modal-form__input
+              input(type="email" name="email" placeholder="Email" @focus="clearBorderEmail").modal-form__input
+              textarea(name="message" placeholder="Ваше сообщение" @focus="clearBorderMessage").modal-form__input.modal-form__input_textarea
             .modal-form__buttons
-              button.modal-form__button Отправить
-              button.modal-form__button Очистить
+              button(type="submit").modal-form__button Отправить
+              button(type="reset").modal-form__button Очистить
             .modal-form__status
               .status-popup.status-popup__success
                 .status-popup__message Сообщение отправлено

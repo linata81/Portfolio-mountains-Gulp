@@ -12,12 +12,13 @@
   }
 }
 .socials__link {
+  display: block;
+  height: 100%;
   opacity: .5;
   &:hover{
     opacity: 1;
   }
 }
-
 .socials__auth svg {
   fill: $green;
 }
@@ -55,17 +56,3 @@
     height: 17px;
   } 
 }
-// .socials__footer {
-//   .icon_vk {
-//     width: 24px;
-//     height: 14px;
-//   }
-//   .icon_github {
-//     width: 22px;
-//     height: 17px;
-//   }
-//   .icon_in {
-//     width: 19px;
-//     height: 17px;
-//   }
-// }

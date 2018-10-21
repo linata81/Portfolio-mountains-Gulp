@@ -1,4 +1,4 @@
-var parallax = (function(){
+var parallaxScroll = (function(){
   var bg = document.querySelector('.hero__bg');
   var sectionBg = document.querySelector('.hero__portfolio-bg');
   var user = document.querySelector('.hero__user_block');
@@ -21,6 +21,7 @@ var parallax = (function(){
 
 window.onscroll = function(){
   var wScroll = window.pageYOffset;
-  parallax.init(wScroll);
+  parallaxScroll.init(wScroll);
 }
+
 

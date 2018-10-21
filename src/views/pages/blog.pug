@@ -11,6 +11,8 @@ block hero
   section.section.hero
     .hero__bg
       +image('bg/hero.jpg','hero__bg-img')
+    .hero__portfolio-bg.hero__portfolio-bg_blog
+      +image('content/portfolio.png','portfolio-header-img')
 
     .container.hero_container
       .hero__user_block
@@ -26,9 +28,7 @@ block hero
     .hero__top-left
       include ../common/socials
       +socials('hero', socials)
-    .hero__top-right
-      .hamburger-menu__wrapper-pic
-        .hamburger-pic
+
     a(href="#").down-arrow.down-arrow_hero
       img(src="assets/images/icons/svg/arrow_down.svg", alt='')
 
