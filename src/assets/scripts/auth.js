@@ -55,7 +55,7 @@ window.addEventListener('mousemove', moveLayers);
       spinner.classList.remove('js-flip');
       setTimeout(function() {
         blockNoHidden.style.display="";
-      }, 150);
+      }, 400);
     }
 
     document.addEventListener('click',turnBack);

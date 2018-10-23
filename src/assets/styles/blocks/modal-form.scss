@@ -114,14 +114,6 @@
   }
 }
 
-.modal-form__status {
-  width: 285px;
-  height: 115px;
-  position: absolute;
-  @include centered();
-  z-index: -1;
-}
-
 .input_error {
   border: 2px solid #e34844;
 }

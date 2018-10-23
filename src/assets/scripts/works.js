@@ -3,8 +3,6 @@ import './modules/hero';
 import './modules/slider';
 import "./modules/hamburger-menu";
 import "./modules/btnScrollDown";
-import "./modules/modalFormValidator";
-
 
 
 (function blur (){
@@ -51,3 +49,38 @@ import "./modules/modalFormValidator";
   btnScrollUp.addEventListener('click', scrollUp);
 })();
 
+(function formValidation(){
+  var modalForm = document.querySelector('.modal-form');
+  var btnErrClose = document.querySelector('.status-popup__error');
+  var btnSuccessClose = document.querySelector('.status-popup__success');
+
+  modalForm.addEventListener('submit', function(e){
+    if(modalForm.name.value == '') {
+      document.querySelector('.status-popup__error').classList.add('active_status');
+      document.querySelector('.status-popup__err_message').innerHTML="Заполните имя";
+      e.preventDefault();
+    }
+    else if(modalForm.email.value == '') {
+      document.querySelector('.status-popup__error').classList.add('active_status');
+      document.querySelector('.status-popup__err_message').innerHTML="Заполните email";
+      e.preventDefault();
+    }
+    else if(modalForm.message.value == '') {
+      document.querySelector('.status-popup__error').classList.add('active_status');
+      document.querySelector('.status-popup__err_message').innerHTML='Заполните поле "сообщение"';
+      e.preventDefault();
+    }
+    else {
+    document.querySelector('.status-popup__success').classList.add('active_status');
+
+    }
+  })
+
+  btnErrClose.addEventListener('click', function(){
+    document.querySelector('.status-popup__error').classList.remove('active_status');
+  })
+  btnSuccessClose.addEventListener('click', function(){
+    document.querySelector('.status-popup__success').classList.remove('active_status');
+    modalForm.reset();
+  })
+})();

@@ -11,6 +11,7 @@ const reload = browserSync.reload;
 const $webpack = require("webpack-stream");
 const webpack = require("webpack");
 const del = require("del");
+const tinypng = require("gulp-tinypng");
 
 // стили
 gulp.task("styles", () => {
@@ -121,11 +122,12 @@ gulp.task("images", () => {
     ])
     .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/`));
 });
-// просто переносим php файл
-gulp.task("php", () => {
-  return gulp
-    .src(`${config.SRC_DIR}/send.php`)
-    .pipe(gulp.dest(`${config.DIST_DIR}/`));
+
+//  IMG - image compression. Ключ брать сдесь >>> https://tinypng.com/developers
+gulp.task('tinypng', function () {
+  return gulp.src('src/assets/optim_img/**/*.{png,jpg,gif}')
+  .pipe(tinypng('2aMLKQ6ECQ33iyqaRf3-emWU0BEF8suR')) //<<< KEY / КЛЮЧ
+  .pipe(gulp.dest('src/assets/final_img/'));
 });
 
 // галповский вотчер
@@ -143,7 +145,7 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts", "php"),
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
 );
@@ -154,6 +156,14 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts", "php")
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts")
+  )
+);
+
+//GULP: img
+gulp.task(
+  "img",
+  gulp.series(
+    "tinypng",
   )
 );

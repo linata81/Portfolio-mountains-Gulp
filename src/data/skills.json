@@ -10,10 +10,10 @@
   {
     "skillsGroup": "Backend",
     "skills": {
-      "PHP": 30,
-      "mySQL": 40,
-      "Node.js & npm": 30,
-      "Mongo.db": 10
+      "PHP": 10,
+      "mySQL": 10,
+      "Node.js & npm": 40,
+      "Mongo.db": 3
     }
   },
   {

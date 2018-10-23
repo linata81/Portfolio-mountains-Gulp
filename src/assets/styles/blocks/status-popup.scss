@@ -1,5 +1,12 @@
 .status-popup {
-  border-radius: 3px;
+  width: 285px;
+  height: 115px;
+  position: absolute;
+  @include centered();
+  z-index: -1;
+  display: none;
+
+  border-radius: 2px;
   text-align: center;
   padding: 20px;
   background: #fff;
@@ -9,10 +16,12 @@
   margin-top: 15px;
 }
 .status-popup__success {
-  display: none;
   border: 1px solid $green;
 }
 .status-popup__error {
-  display: none;
   border: 1px solid #e34844;
+}
+.active_status {
+  display: block;
+  z-index: 0;
 }
