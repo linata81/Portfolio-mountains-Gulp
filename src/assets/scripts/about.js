@@ -5,6 +5,7 @@ import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
 (function initMap() {
+  const google = window.google;
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
     center: { lat: 45.024839, lng: 38.902187 },
@@ -207,5 +208,6 @@ import "./modules/btnScrollDown";
     map: map,
     icon: 'assets/images/icons/svg/map_marker.svg'
   });
+  marker.setMap(map);
 })();
 
