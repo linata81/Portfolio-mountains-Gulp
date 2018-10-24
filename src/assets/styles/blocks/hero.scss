@@ -2,8 +2,7 @@
   overflow: hidden;
   height: 100vh;
   @include phones {
-    min-height: auto;
-    background: url('/assets/images/bg/auth.jpg')center center no-repeat;
+    background: url('./assets/images/bg/auth.jpg')center center no-repeat;
     background-size: cover;
   }
 }

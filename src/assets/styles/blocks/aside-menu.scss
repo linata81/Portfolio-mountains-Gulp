@@ -12,7 +12,6 @@
     padding-right: 50px;
   } 
   @include tablets {
-    width: 40%;
     padding-right: 0;
     padding-top: 0px;
     position: absolute;
@@ -22,9 +21,7 @@
     background: $green;
     color: #fff;
     z-index: 10;
-  }
-  @include phones {
-    width: 80%;
+    width: 0;
   }
 }
 .aside-menu__list {
@@ -34,21 +31,13 @@
       padding-top: 30%;
       position: sticky;
       top: 0;
-      &:after {
-        content: "";
-        width: 20px;
-        height: 40px;
-        background: $green;
-        border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-        position: absolute;
-        top: 48%;
-        left: 100%;
-        cursor: pointer;
-      }
     }
 }
 .aside-menu__item{
   text-align: right;
+  @include tablets {
+    opacity: 0;
+  }
 }
 .aside-menu__btn {
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -77,9 +66,27 @@
   }
 }
 
-.js-aside-close {
-  width: 0;
-  .aside-menu__btn {
-    opacity: 0;
+.semicircle {
+  width: 20px;
+  height: 40px;
+  background: $green;
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  position: absolute;
+  top: 48%;
+  left: 100%;
+  cursor: pointer;
+  display: none;
+  @include tablets {
+    display: block;
+  }
+}
+
+.js-aside-open {
+  width: 40%;;
+  .aside-menu__item {
+    opacity: 1;
+  }
+  @include phones {
+    width: 80%;
   }
 }

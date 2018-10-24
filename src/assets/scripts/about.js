@@ -1,7 +1,7 @@
 import "./modules/preloader";
 import "./modules/skills";
 import "./modules/hero";
-import "./modules/hamburger-menu";
+import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
 (function initMap() {

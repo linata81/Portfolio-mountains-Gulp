@@ -1,7 +1,7 @@
 import "./modules/preloader";
 import './modules/hero';
 import './modules/slider';
-import "./modules/hamburger-menu";
+import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
 

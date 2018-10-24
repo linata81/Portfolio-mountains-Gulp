@@ -11,9 +11,6 @@ block variables
                    ['map_marker', 'г.Краснодар, ул.Рождественская Набережная, д.3']
                    ];
 
-block scripts
-  script(src='about.bundle.js')
-
 block hero
   include ../common/hero.pug
 
@@ -29,7 +26,7 @@ block content
         .about__desk
           .user-desk
             .user-desk__pic
-              img(src="assets/images/content/about.jpg", alt='user').user-desk__pic-elem
+              img(src="./assets/images/content/about.jpg", alt='user').user-desk__pic-elem
             .user-desk__info
               h3.user-desk__title
                 .subtitle кто я
@@ -46,7 +43,8 @@ block content
         .about__info-container
           #skills-component
 
-  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ")
+  //- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ" type = "text/javascript") //без async defer
+  script( async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATfP1RmRasCx3-MSXv7h68sy41MGnx2TQ" type = "text/javascript")  <!-- c async defer, добавляла &callback=initMap -->
   section.map
     .map__google#map
     .map__data
@@ -71,6 +69,10 @@ block content
                       a(href="mailto:linata81@gmail.com" class="contacts__link") #{item[1]}
                   else
                     .contacts__desk.contacts-row #{item[1]}
+
+block scripts
+  script(src='about.bundle.js')
+
 
 
 
