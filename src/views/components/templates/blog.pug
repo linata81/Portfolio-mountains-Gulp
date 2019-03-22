@@ -21,6 +21,9 @@ script(type="text/x-template")#blog-articles
     article.article.js-article(:data-article="articles.index" v-for="articles in articles")
       .subtitle.subtitle_article {{articles.title}}
       time.article__date {{articles.date}}
-      .article__text(v-for="articles in articles.text")
-        p {{articles}}
+      .article__text
+        p.article__p(v-for="articles in articles.text") {{articles}}
+        .photo-wrap
+          img(:src="articles.photo", class='articles-photo')
+
 

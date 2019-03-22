@@ -38,3 +38,21 @@
     padding: 0 0 10px 0;
   }
 }
+.article__p {
+  text-indent: 25px;
+}
+.photo-wrap {
+  height: 250px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.articles-photo {
+  height: 100%;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  &:hover {
+    transform: scale(2.5);
+    z-index: 10;
+  }
+}
