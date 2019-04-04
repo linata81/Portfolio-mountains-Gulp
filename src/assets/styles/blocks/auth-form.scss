@@ -175,6 +175,18 @@
   display: flex;
   width: 100%;
   margin-top: 20px;
+  @include laptops {
+    margin-top: 26px;
+  }
+  @include tablets {
+    margin-top: 30px;
+  }
+  @include phones {
+    margin-top: 21px;
+  }
+  @include minWidth {
+    margin-top: 11px;
+  }
 }
 
 .authError {

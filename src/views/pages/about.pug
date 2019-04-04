@@ -5,7 +5,7 @@ block variables
   - var current = title
   -
     var contacts = [
-                   ['skype', 'skype_kdn'],
+                   ['skype', 'linata81'],
                    ['envelope', 'linata81@gmail.com'],
                    ['phone', '+7 905 476 17 50'],
                    ['map_marker', 'г.Краснодар, ул.Рождественская Набережная, д.3']
@@ -62,7 +62,7 @@ block content
                       a(href="tel:+79054761750" class="contacts__link") #{item[1]}
                   else if item[0]=='skype'
                     .contacts__desk.contacts-row 
-                      a(href="skype:skype_kdn" class="contacts__link") #{item[1]}
+                      a(href="skype:linata81?call" class="contacts__link") #{item[1]}
                   else if item[0]=='envelope'
                     .contacts__desk.contacts-row 
                       a(href="mailto:linata81@gmail.com" class="contacts__link") #{item[1]}

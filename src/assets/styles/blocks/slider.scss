@@ -48,6 +48,7 @@
 .slider__info-title {
   text-align: center;
   width: 290px;
+  min-height: 104px;
   margin-bottom: 15px;
   @include laptops {
     width: 100%;

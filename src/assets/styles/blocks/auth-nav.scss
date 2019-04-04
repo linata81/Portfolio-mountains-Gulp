@@ -1,6 +1,12 @@
 .auth-nav__list {
   display: flex;
   width: 100%;
+  @include tablets {
+    margin-top: 4px;
+  }
+  @include phones {
+    margin-top: 0;
+  }
 }
 .auth-nav__item {
   border-right: 2px solid rgba(#fff, .5);
