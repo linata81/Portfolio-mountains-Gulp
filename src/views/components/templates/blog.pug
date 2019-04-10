@@ -23,7 +23,7 @@ script(type="text/x-template")#blog-articles
       time.article__date {{articles.date}}
       .article__text
         p.article__p(v-for="articles in articles.text") {{articles}}
-        .photo-wrap
-          img(:src="articles.photo", class='articles-photo')
+      .photo-article
+        img(:src="articles.photo", class='articles-img')
 
 

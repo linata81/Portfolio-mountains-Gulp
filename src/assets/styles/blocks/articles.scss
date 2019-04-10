@@ -1,27 +1,23 @@
 .blog__articles {
-  width: 70%;
-  padding-left: 20px;
-  padding-right: 100px;
+  width: 80%;
   @include desktops {
-    width: 68%;
-  } 
-  @include laptops {
-    padding-right: 50px;
+    width: 70%;
   } 
   @include tablets {
-    width: 95%;
-    padding-right: 10px;
+    width: 100%;
   } 
 }
 .article {
-  padding-top: 50px;
-  padding-bottom: 65px;
+  padding: 50px 120px 65px 115px;
   border-bottom: 5px solid rgba($text-color, 0.07);
   display: flex;
   flex-direction: column;
   &:last-child {
     border-bottom: none;
   }
+  @include desktops {
+    padding: 50px 30px 65px 30px;
+  } 
   @include tablets {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -38,14 +34,20 @@
     padding: 0 0 10px 0;
   }
 }
+.article__text {
+  margin-bottom: 30px;
+}
 .article__p {
   text-indent: 25px;
 }
-.photo-wrap {
+.photo-article {
   display: flex;
   justify-content: center;
 }
-.articles-photo {
-  margin-top: 30px;
-  height: 100%;
+.articles-img {
+  width: 100%;
+  @include phones {
+    width: 90%;
+    height: 90%;
+  }
 }

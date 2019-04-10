@@ -48,10 +48,11 @@
 .slider__info-title {
   text-align: center;
   width: 290px;
-  min-height: 104px;
+  height: 105px;
   margin-bottom: 15px;
   @include laptops {
     width: 100%;
+    height: auto;
   }
   @include tablets {
     width: 100%;
@@ -77,6 +78,9 @@
     margin-bottom: 20px;
     width: 100%;
   }
+  @include laptops {
+    margin-bottom: 11px;
+  }
 }
 .slider__info-button {
   text-align: center;
@@ -93,6 +97,9 @@
   width: 100%;
   @include mediumDesktops {
     width: 90%;
+  }
+  @include laptops {
+    width: 80%;
   }
 }
 
