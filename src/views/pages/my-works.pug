@@ -22,7 +22,7 @@ block content
         +title('мои работы', 'works.png')
 
       #slider-component
-
+ 
   section.reviews
     .reviews__bg
       +image('bg/reviews.jpg','reviews__bg-img')
@@ -56,13 +56,13 @@ block content
       .reviews__form-container
         .modal-form__wrapper
           .modal-form__bg
-          form.modal-form(action="mailto:linata81@gmail.com" enctype="text/plain" method="post")
+          form.modal-form(id="modal-form")
             .modal-form__title
               .subtitle Связаться со мной
             .modal-form__container
-              input(type="text" name="name" placeholder="Имя").modal-form__input
-              input(type="email" name="email" placeholder="Email").modal-form__input
-              textarea(name="message" placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+              input(type="text" name="name" placeholder="Имя" required).modal-form__input
+              input(type="email" name="email" placeholder="Email" required).modal-form__input
+              textarea(name="message" placeholder="Ваше сообщение" required).modal-form__input.modal-form__input_textarea
             .modal-form__buttons
               button(type="submit").modal-form__button Отправить
               button(type="reset").modal-form__button Очистить
@@ -70,7 +70,7 @@ block content
               .status-popup__message Сообщение отправлено
               .status-popup__close.button.button_green Закрыть
             .status-popup.status-popup__error
-              .status-popup__err_message 
+              .status-popup__err_message Произошла ошибка
               .status-popup__close.button.button_red Закрыть
 
     a(href="#").down-arrow.down-arrow_my-works

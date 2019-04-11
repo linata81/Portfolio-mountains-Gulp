@@ -3,23 +3,22 @@
   height: 115px;
   position: absolute;
   @include centered();
-  z-index: -1;
-  display: none;
-
   border-radius: 2px;
   text-align: center;
   padding: 20px;
   background: #fff;
 }
-.status-popup__close {
-  padding: 10px 20px;
-  margin-top: 15px;
-}
 .status-popup__success {
   border: 1px solid $green;
+  display: none;
 }
 .status-popup__error {
   border: 1px solid #e34844;
+  display: none;
+}
+.status-popup__close {
+  padding: 10px 20px;
+  margin-top: 15px;
 }
 .active_status {
   display: block;

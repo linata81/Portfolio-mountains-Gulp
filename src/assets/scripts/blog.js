@@ -9,9 +9,6 @@ var menu = document.querySelector('.aside-menu');
 var semicircle = document.querySelector('.semicircle');
 
 (function asideMenuOpen(){
-  // var semicircle = document.querySelector('.semicircle');
-  // var menu = document.querySelector('.aside-menu');
-
   semicircle.addEventListener('click', function(){
     menu.classList.toggle('js-aside-open');
   })

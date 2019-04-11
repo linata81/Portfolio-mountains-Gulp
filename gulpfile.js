@@ -139,13 +139,21 @@ gulp.task("watch", () => {
   gulp.watch(`${config.VIEWS_DIR}/**/*.pug`, gulp.series("pug"));
 });
 
+// переносим php
+gulp.task("php", () => {
+  return gulp
+    .src(`${config.SRC_DIR}/*.php`)
+    .pipe(gulp.dest(`${config.DIST_DIR}/`));
+});
+
+
 // GULP:DEV
 gulp.task(
   "default",
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts", "php"),
     gulp.parallel("watch", "server")
   )
 );
@@ -156,7 +164,7 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts")
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts", 'php')
   )
 );
 

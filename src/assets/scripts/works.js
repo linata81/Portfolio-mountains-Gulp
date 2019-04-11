@@ -4,6 +4,8 @@ import './modules/slider';
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
+var $ = require('jquery');
+
 
 (function blur (){
   var blur = (function(){
@@ -49,38 +51,38 @@ import "./modules/btnScrollDown";
   btnScrollUp.addEventListener('click', scrollUp);
 })();
 
-(function formValidation(){
-  var modalForm = document.querySelector('.modal-form');
-  var btnErrClose = document.querySelector('.status-popup__error');
-  var btnSuccessClose = document.querySelector('.status-popup__success');
+//отправляем форму с помощью Qjuerry
 
-  modalForm.addEventListener('submit', function(e){
-    if(modalForm.name.value == '') {
-      document.querySelector('.status-popup__error').classList.add('active_status');
-      document.querySelector('.status-popup__err_message').innerHTML="Заполните имя";
-      e.preventDefault();
-    }
-    else if(modalForm.email.value == '') {
-      document.querySelector('.status-popup__error').classList.add('active_status');
-      document.querySelector('.status-popup__err_message').innerHTML="Заполните email";
-      e.preventDefault();
-    }
-    else if(modalForm.message.value == '') {
-      document.querySelector('.status-popup__error').classList.add('active_status');
-      document.querySelector('.status-popup__err_message').innerHTML='Заполните поле "сообщение"';
-      e.preventDefault();
-    }
-    else {
-    document.querySelector('.status-popup__success').classList.add('active_status');
+$(document).ready(function(){
 
-    }
-  })
+  var submitForm = function(e) {
+    e.preventDefault();
+    var form = $(e.target),
+        url  = "mail.php",
+        data = form.serialize();
 
-  btnErrClose.addEventListener('click', function(){
-    document.querySelector('.status-popup__error').classList.remove('active_status');
-  })
-  btnSuccessClose.addEventListener('click', function(){
-    document.querySelector('.status-popup__success').classList.remove('active_status');
-    modalForm.reset();
-  })
-})();
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data
+    });
+
+    request.done(function() {
+      $('.status-popup__success').show();
+      form.trigger("reset");
+    });
+    request.fail(function() {
+      $('.status-popup__error').show();
+    });
+};
+
+  $('#modal-form').on('submit', submitForm);
+
+  $('.status-popup__close').on('click', function(e){
+    e.preventDefault();
+    $('.status-popup__error').hide();
+    $('.status-popup__success').hide();
+  });
+});
+
+
