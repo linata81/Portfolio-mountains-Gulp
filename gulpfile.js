@@ -142,7 +142,7 @@ gulp.task("watch", () => {
 // переносим php
 gulp.task("php", () => {
   return gulp
-    .src(`${config.SRC_DIR}/*.php`)
+    .src("src/*.php")
     .pipe(gulp.dest(`${config.DIST_DIR}/`));
 });
 

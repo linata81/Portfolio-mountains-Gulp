@@ -51,7 +51,7 @@ var $ = require('jquery');
   btnScrollUp.addEventListener('click', scrollUp);
 })();
 
-//отправляем форму с помощью Qjuerry
+//отправляем форму с помощью Qjuerry.
 
 $(document).ready(function(){
 
