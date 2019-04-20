@@ -45,8 +45,7 @@
   justify-content: center;
 }
 .articles-img {
-  width: 100%;
-  @include phones {
+  @include laptops {
     width: 90%;
     height: 90%;
   }
