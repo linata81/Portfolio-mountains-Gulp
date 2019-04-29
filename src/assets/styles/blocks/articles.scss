@@ -37,9 +37,17 @@
 .article__text {
   margin-bottom: 30px;
 }
-.article__p {
+.article__text p{
   text-indent: 25px;
 }
+.article__ul {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-indent: 25px;
+  list-style: initial;
+  list-style-position: inside;
+}
+
 .photo-article {
   display: flex;
   justify-content: center;

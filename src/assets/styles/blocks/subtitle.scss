@@ -31,10 +31,9 @@
     font-size: 21px;
   }
 }
-.subtitle_article {
-  max-width: 605px;
-  text-align: left ;
-  &:after, &:before {
-    display: none;
-  }
+
+.article_subtitle {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

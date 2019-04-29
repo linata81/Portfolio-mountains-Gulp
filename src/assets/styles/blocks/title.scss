@@ -53,3 +53,10 @@
     left: 50px;
   }
 }
+.article_title {
+  max-width: 605px;
+  text-align: left ;
+  &:after, &:before {
+    display: none;
+  }
+}
