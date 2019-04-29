@@ -1,13 +1,12 @@
 .aside-menu {
   width: 20%;
-  padding-left: 50px;
   padding-top: 68px;
   text-align: right;
   @include desktops {
     width: 30%;
   }
   @include tablets {
-    padding: 0;
+    // padding: 50px 5px 0 25px;
     padding-top: 50px;
     position: absolute;
     top: 0;
@@ -24,18 +23,25 @@
   top: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
     @include tablets {
       top: 50px;
     }
 }
+.aside-menu__item {
+  border-right: 3px solid transparent;
+  @include tablets {
+    border: none;
+  }
+}
 .aside-menu__btn {
+  text-align: right;
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   color: $text-color;
   background: transparent;
-  padding: 15px 20px 15px 0;
-  text-align: right;
+  padding: 15px 20px;
   outline: none;
   @include tablets {
     color: rgba(#ffffff, .7);

@@ -3,7 +3,7 @@
   const navBtn         = nav.getElementsByClassName('js-scroll-article');
   const articles       = document.querySelectorAll(".js-article");
   const activeBtnClass = 'aside-menu__btn-active';
-  const speed          = 0.3;
+  const speed          = 0.25;
   let clickAnimation   = false;
   let positionArticles = [];
   let navBtnArray      = Array.from(navBtn);
