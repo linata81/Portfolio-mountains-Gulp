@@ -48,21 +48,6 @@
 .back {
   transform: rotateY(180deg); 
 }
-.back__title {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  @include phones {
-    padding-top: 19px;
-    padding-bottom: 21px;
-    .subtitle {
-      font-size: 30px;
-    }
-  }
-  @include minWidth {
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-}
 .front__top {
   padding-top: 43px;
   @include phones {

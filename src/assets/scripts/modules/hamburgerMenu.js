@@ -21,7 +21,7 @@ function addOpacity(item){
   const promise = new Promise(function(resolve) {
     setTimeout(function() {
        item.style.opacity="1"; 
-      }, 600);
+      }, 500);
     resolve();
   });
  return promise;

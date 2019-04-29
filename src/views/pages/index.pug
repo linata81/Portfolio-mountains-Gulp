@@ -20,31 +20,31 @@ block content
         .spinner
 
           .side.back
-            h3.back__title
-              .subtitle авторизуйтесь
-            form.auth-form(action="" @submit="validator")
-              .auth-form__row
-                .auth-form__img
+            form.contact-form(action="php/callback.php" method="POST")
+
+              //- Hidden Required Fields
+              input(type="hidden" name="project_name" value="Сайт Портфолио")
+              input(type="hidden" name="admin_email" value="linata81@gmail.com")
+              input(type="hidden" name="email_from" value="info@portfolio.ru")
+              input(type="hidden" name="form_subject" value="Обратный звонок с сайта")
+              //- END Hidden Required Fields
+
+              .contact-form__title
+                h2.subtitle.contact-form_subtitle заполните заявку
+                .title_text и я свяжусь с Вами
+
+              .contact-form__row
+                .contact-form__img
                   +icon('login', 'icon icon_login')
-                input(type="text" class="auth-form__input" name="name" placeholder="Логин" @focus="clearBorderName")
-              .auth-form__row
-                .auth-form__img
-                  +icon('password', 'icon icon_password')
-                input(type="password" class="auth-form__input" name="pass" placeholder="Пароль" @focus="clearBorderPass")
-              .auth-form__row.auth-form__checkbox
-                input(type="checkbox" class="input__checkbox" id="human" name="human" value="я человек" @click="clearCheckbox")
-                label(for="human" class="checkbox__label") Я человек
-              span.radio-text Вы точно не робот?
-              .auth-form__row.auth-form__radio
-                .radio-block
-                  input(type="radio" class="input__radio" name="answer" value="да" id="input_yes" @click="answerYes")
-                  label(for="input_yes" class="radio__label") Да
-                .radio-block
-                  input(type="radio" class="input__radio" name="answer" value="Не уверен" id="input_no")
-                  label(for="input_no" class="radio__label") Не уверен
-              .auth-form__button
+                input(type="text" class="contact-form__input" name="Имя" placeholder="Имя" required)
+              .contact-form__row
+                .contact-form__img
+                  +icon('phone', 'icon icon_phone')
+                input(type="phone" class="contact-form__input" name="Телефон" placeholder="Номер телефона" required)
+              .contact-form__button
                 button(type="button").button.button_green.button_form На главную
-                button(type="submit").button.button_green.button_form Войти
+                button(type="submit").button.button_green.button_form Отправить
+
 
           .side.front
             .front__top
@@ -58,7 +58,7 @@ block content
               +nav('auth-nav', authFrontNav)
             
       .auth__button
-        button.button.button__auth(type="button") Авторизоваться
+        button.button.button__auth(type="button") Перезвоните мне
 
       .auth__copyright
         .copyright.copyright_auth &copy; Наталья Лысак

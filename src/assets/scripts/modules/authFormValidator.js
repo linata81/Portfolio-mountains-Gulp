@@ -21,6 +21,9 @@ new Vue({
         e.preventDefault();
         document.getElementById('input_yes').parentNode.style="color:#e34844";
       }
+      e.preventDefault();
+      // authForm.splice(0, authForm.length);
+      alert (11111);
     },
     clearBorderName(){
       var authForm = document.querySelector('.auth-form');

@@ -36,6 +36,9 @@ text-decoration: none;
     background-color: #fff;
     color: $green;
   }
+  @include phones {
+    padding: 10px 20px;
+  }
 }
 .button_form {
   flex: 1;

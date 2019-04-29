@@ -9,42 +9,28 @@
   }
 }
 .auth-nav__item {
+  width: 100%;
   border-right: 2px solid rgba(#fff, .5);
   &:last-child {
     border-right: none;
     @include phones {
-      border-right: 1px solid $green;
+      border-right: 2px solid $green;
     }
   }
 }
 .auth-nav__link {
   display: block;
+  padding-top: 11px;
+  padding-bottom: 12px;
   text-align: center;
-  padding: 11px 31px 12px 31px;
   text-decoration: none;
   color:#fff;
   background-color: $green;
-  &:last-child {
-    padding-right: 31px;
-  }
   &:hover {
     background-color: $dark-green;
   }
   &:active, &:focus {
     background-color: rgba($grey,.2);
-  }
-  @include tablets {
-    &:last-child {
-      padding-right: 29px;
-      padding-left: 30px;
-    }
-  }
-  @include phones {
-    padding: 11px 20px;
-    &:last-child {
-      padding-right: 22px;
-      padding-left: 21px;
-    }
   }
 }
 .auth-nav__back {

@@ -1,0 +1,91 @@
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form__title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include phones {
+    padding-top: 19px;
+    padding-bottom: 21px;
+    .subtitle {
+      font-size: 30px;
+    }
+  }
+  @include minWidth {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+.title_text {
+  text-align: center;
+  font-size: 18px;
+  @include phones {
+    font-size: 16px;
+  }
+}
+.contact-form__row {
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+}
+.contact-form__img {
+  width: 45px;
+  height: 45px;
+  padding: 15px;
+  background-color: #f0efe9;
+}
+.contact-form__input {
+  width: 300px;  
+  padding: 0 20px;
+  border: none;
+  outline:none;
+  @include tablets {
+    width: 264px;
+  }
+  @include phones {
+    width: 215px;
+  }
+}
+.contact-form__button {
+  display: flex;
+  width: 100%;
+  margin-top: 95px;
+  @include laptops {
+    margin-top: 101px;
+  }
+  @include tablets {
+    margin-top: 98px;
+  }
+  @include phones {
+    margin-top: 92px;
+  }
+  @include minWidth {
+    margin-top: 82px;
+  }
+}
+// .authError {
+//   input {
+//     border:1px solid #e34844;
+//     border-radius: 3px;
+//   }
+//   svg {
+//     fill:#e34844;
+//   }
+//   label {
+//     color: #e34844;
+//   }
+// }
+// .authSuccess {
+//   input {
+//     border:1px solid $green;
+//     border-radius: 3px;
+//   }
+//   svg {
+//     fill:$green;
+//   }
+// }
