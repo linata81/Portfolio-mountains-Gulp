@@ -4,6 +4,9 @@ import "./modules/hero";
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
+require('jquery');
+require('jquery-modal');
+
 (function initMap() {
   const google = window.google;
   const map = new google.maps.Map(document.getElementById("map"), {

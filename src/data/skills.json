@@ -4,7 +4,8 @@
     "skills": {
       "HTML5": 97,
       "CSS3": 95,
-      "JavaScript & jQuerry": 70
+      "JavaScript & jQuerry": 70,
+      "Vue.js": 25
     }
   },
   {
@@ -12,8 +13,7 @@
     "skills": {
       "PHP": 10,
       "mySQL": 10,
-      "Node.js & npm": 65,
-      "Vue.js": 25
+      "Node.js & npm": 65
     }
   },
   {

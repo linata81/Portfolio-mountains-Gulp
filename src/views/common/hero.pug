@@ -10,6 +10,34 @@ section.section.hero
         include ../common/user.pug
         +user('hero')
 
+    .hero__btn
+      a.button.button__auth.button_hero(href="#ex1" rel="modal:open") Перезвоните мне
+
+    //- Modal HTML embedded directly into document
+    .modal#ex1
+      form.contact-form.contact-form_pages(action="php/callback.php" method="POST")
+        //- Hidden Required Fields
+        input(type="hidden" name="project_name" value="Сайт Портфолио")
+        input(type="hidden" name="admin_email" value="linata81@gmail.com")
+        input(type="hidden" name="email_from" value="info@portfolio.ru")
+        input(type="hidden" name="form_subject" value="Обратный звонок с сайта")
+        //- END Hidden Required Fields
+
+        .contact-form__title
+          h2.subtitle.contact-form_subtitle заполните заявку
+          .title_text и я свяжусь с Вами
+
+        .contact-form__row.contact-form__row_pages
+          .contact-form__img.contact-form__img_border
+            +icon('login', 'icon icon_login')
+          input(type="text" class="contact-form__input contact-form__input_pages" name="Имя" placeholder="Имя" required)
+        .contact-form__row.contact-form__row_pages
+          .contact-form__img.contact-form__img_border
+            +icon('phone', 'icon icon_phone')
+          input(type="phone" class="contact-form__input" name="Телефон" placeholder="Номер телефона" required)
+        .contact-form__button.contact-form__button_pages
+          button(type="submit").button.button_green.button_form Отправить
+
     .hero__top-left
       include ../common/socials
       +socials('hero', socials)

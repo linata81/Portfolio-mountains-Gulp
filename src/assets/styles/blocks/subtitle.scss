@@ -31,11 +31,17 @@
     font-size: 21px;
   }
 }
-.contact-form_subtitle {
-  padding-bottom: 0;
-}
 .article_subtitle {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.contact-form_subtitle {
+  padding-bottom: 0;
+  @include phones {
+    font-size: 30px;
+  }
+  @include minWidth {
+    font-size: 24px;
+  }
 }

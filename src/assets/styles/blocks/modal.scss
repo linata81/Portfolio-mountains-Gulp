@@ -1,0 +1,10 @@
+.modal {
+  width: 400px;
+  @include phones {
+    width: auto;
+  }
+  @include minWidth {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

@@ -47,14 +47,28 @@
   @include centered();
   z-index: 50;
 }
-.hero__user_block {
+.hero__btn{
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include phones {
+    bottom: 175px;
+  }
+  @include minWidth {
+    bottom: 97px;
+  }
 }
-.user-block__position {
+.hero__btn_mod{
+  bottom: 250px;
+  @include phones {
+    bottom: 175px;
+  }
+  @include minWidth {
+    bottom: 97px;
+  }
+}
+.hero__user_block {
   @include centered();
 }
 .hero__top-left {

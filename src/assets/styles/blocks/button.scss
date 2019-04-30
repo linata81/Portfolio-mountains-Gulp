@@ -39,6 +39,10 @@ text-decoration: none;
   @include phones {
     padding: 10px 20px;
   }
+  @include minWidth {
+    padding: 10px 10px;
+  }
+  
 }
 .button_form {
   flex: 1;

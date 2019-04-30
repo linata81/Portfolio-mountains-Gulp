@@ -5,6 +5,7 @@ import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 
 var $ = require('jquery');
+require('jquery-modal');
 
 
 (function blur (){
