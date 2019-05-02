@@ -1,5 +1,6 @@
 import "./modules/preloader";
-import "./modules/authFormValidator";
+import "./modules/contactForm";
+
 
 (function parallax() {
   const parallaxContainer = document.querySelector('.parallax');
@@ -62,8 +63,6 @@ window.addEventListener('mousemove', moveLayers);
   }
 
 })();
-
-
 
 
 

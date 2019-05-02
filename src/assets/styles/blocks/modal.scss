@@ -1,7 +1,7 @@
 .modal {
   width: 400px;
   @include phones {
-    width: auto;
+    width: 100%;
   }
   @include minWidth {
     padding-left: 5px;

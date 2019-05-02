@@ -3,8 +3,7 @@ import './modules/hero';
 import './modules/slider';
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
-
-var $ = require('jquery');
+import "./modules/contactForm";
 require('jquery-modal');
 
 
@@ -52,38 +51,5 @@ require('jquery-modal');
   btnScrollUp.addEventListener('click', scrollUp);
 })();
 
-//отправляем форму с помощью Qjuerry.
-
-$(document).ready(function(){
-
-  var submitForm = function(e) {
-    e.preventDefault();
-    var form = $(e.target),
-        url  = "mail.php",
-        data = form.serialize();
-
-    var request = $.ajax({
-        type: 'POST',
-        url: url,
-        data: data
-    });
-
-    request.done(function() {
-      $('.status-popup__success').show();
-      form.trigger("reset");
-    });
-    request.fail(function() {
-      $('.status-popup__error').show();
-    });
-};
-
-  $('#modal-form').on('submit', submitForm);
-
-  $('.status-popup__close').on('click', function(e){
-    e.preventDefault();
-    $('.status-popup__error').hide();
-    $('.status-popup__success').hide();
-  });
-});
 
 

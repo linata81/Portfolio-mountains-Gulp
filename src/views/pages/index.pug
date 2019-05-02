@@ -36,15 +36,15 @@ block content
               .contact-form__row
                 .contact-form__img
                   +icon('login', 'icon icon_login')
-                input(type="text" class="contact-form__input" name="Имя" placeholder="Имя" required)
+                input(type="text" class="contact-form__input" name="name" placeholder="Имя" maxlength="33")
+
               .contact-form__row
                 .contact-form__img
                   +icon('phone', 'icon icon_phone')
-                input(type="phone" class="contact-form__input" name="Телефон" placeholder="Номер телефона" required)
+                input(type="text" class="contact-form__input input-phone" name="phone" placeholder="Номер телефона")
               .contact-form__button
                 button(type="button").button.button_green.button_form На главную
                 button(type="submit").button.button_green.button_form Отправить
-
 
           .side.front
             .front__top

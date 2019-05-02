@@ -3,8 +3,7 @@ import "./modules/hero";
 import "./modules/hamburgerMenu";
 import "./modules/asideMenu";
 import "./modules/btnScrollDown";
-
-require('jquery');
+import "./modules/contactForm";
 require('jquery-modal');
 
 var menu = document.querySelector('.aside-menu');

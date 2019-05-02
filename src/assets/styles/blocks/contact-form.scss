@@ -6,7 +6,11 @@
 }
 .contact-form_pages {
   width: 300px;
+  height: 420px;
   margin: 0 auto;
+  @include laptops {
+    height: auto;
+  }
   @include phones {
     width: 100%;
   }
@@ -35,7 +39,7 @@
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  margin-top: 25px;
+  margin: 25px 17px 0 17px;
 }
 .contact-form__row_pages {
   width: 100%;
@@ -68,7 +72,7 @@
     width: 264px;
   }
   @include phones {
-    width: 215px;
+    width: 100%;
   }
 }
 .contact-form__input_pages {
@@ -77,43 +81,39 @@
 .contact-form__button {
   display: flex;
   width: 100%;
-  margin-top: 95px;
-  @include laptops {
-    margin-top: 101px;
-  }
-  @include tablets {
-    margin-top: 98px;
-  }
-  @include phones {
-    margin-top: 92px;
-  }
-  @include minWidth {
-    margin-top: 82px;
-  }
+  position: absolute;
+  bottom: 0;
 }
 .contact-form__button_pages {
+  position: relative;
   width: 192px;
   border-radius: 5px;
   overflow: hidden;
+  margin-top: 70px;
+  @include laptops {
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+  @include phones {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  @include minWidth {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
 }
-// .authError {
-//   input {
-//     border:1px solid #e34844;
-//     border-radius: 3px;
-//   }
-//   svg {
-//     fill:#e34844;
-//   }
-//   label {
-//     color: #e34844;
-//   }
-// }
-// .authSuccess {
-//   input {
-//     border:1px solid $green;
-//     border-radius: 3px;
-//   }
-//   svg {
-//     fill:$green;
-//   }
-// }
+label.error {
+  position:absolute;
+  left:20000px;
+  top:0;
+  }
+input.error {
+  border: 2px solid #e34844 !important;
+  border-radius: 5px !important;
+ }
+input.valid {
+  border: 2px solid $green !important;
+  border-radius: 5px !important;
+ }
+

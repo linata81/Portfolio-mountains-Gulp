@@ -3,8 +3,7 @@ import "./modules/skills";
 import "./modules/hero";
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
-
-require('jquery');
+import "./modules/contactForm";
 require('jquery-modal');
 
 (function initMap() {
