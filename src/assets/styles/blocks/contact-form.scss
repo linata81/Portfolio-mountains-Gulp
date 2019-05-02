@@ -89,17 +89,17 @@
   width: 192px;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 30px;
   @include laptops {
-    margin-top: 55px;
-    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-bottom: 20px;
   }
   @include phones {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
   @include minWidth {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 0px;
   }
 }
@@ -107,13 +107,26 @@ label.error {
   position:absolute;
   left:20000px;
   top:0;
-  }
+ }
 input.error {
   border: 2px solid #e34844 !important;
   border-radius: 5px !important;
- }
+}
 input.valid {
   border: 2px solid $green !important;
   border-radius: 5px !important;
- }
+}
+ .contact-form__message {
+   margin-top: 25px;
+   height: 35px;
+   color: #047c6c;
+}
+.message-err {
+  text-align: center;
+  color: #e34844;
+  h2 {
+    font-size: 20px;
+  }
+}
+
 

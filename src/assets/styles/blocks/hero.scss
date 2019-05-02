@@ -53,7 +53,7 @@
   left: 50%;
   transform: translateX(-50%);
   @include phones {
-    bottom: 175px;
+    bottom: 155px;
   }
   @include minWidth {
     bottom: 97px;
@@ -62,7 +62,7 @@
 .hero__btn_mod{
   bottom: 250px;
   @include phones {
-    bottom: 175px;
+    bottom: 155px;
   }
   @include minWidth {
     bottom: 97px;

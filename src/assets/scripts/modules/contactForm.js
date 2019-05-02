@@ -33,11 +33,11 @@ $(document).ready(function(){
         });
 
         request.done(function() {
-          alert("Валидация успешна!");
+          $('.contact-form__message ').html("<h2>Сообщение отправлено!</h2>")
           form.trigger("reset");
         });
         request.fail(function() {
-          alert("Что то пошло не так!");
+          $('.contact-form__message ').addClass('message-err').html("<h2>Произошла ошибка, попробуйте позже.</h2>")
         });
     }
   });
@@ -76,6 +76,11 @@ $(document).ready(function(){
 //     $('.status-popup__error').hide();
 //     $('.status-popup__success').hide();
 //   });
+
+// request.fail(function() { // с 1 варианта но для 2 формы
+//   $.modal.close();
+//   $(".status-popup__error").css("display","block");
+// });
 // });
 
 
