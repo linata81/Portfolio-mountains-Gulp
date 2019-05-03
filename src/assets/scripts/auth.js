@@ -34,11 +34,15 @@ window.addEventListener('mousemove', moveLayers);
     const spinner       = document.querySelector('.spinner');
     const welcome       = document.querySelector('.button_form[type="button"]');
     const blockNoHidden = document.querySelector('.socials__auth');
+    const front         = document.querySelector('.front');
 
     auth.addEventListener("click", function(e){
       auth.style.display="none";
       spinner.classList.add('js-flip');
       blockNoHidden.style.display="none";
+      setTimeout(function() {
+        front.style.display="none";
+      }, 300);
       e.stopPropagation();
     });
 
@@ -55,8 +59,9 @@ window.addEventListener('mousemove', moveLayers);
       auth.style.display="";
       spinner.classList.remove('js-flip');
       setTimeout(function() {
+        front.style.display="";
         blockNoHidden.style.display="";
-      }, 400);
+      }, 300);
     }
 
     document.addEventListener('click',turnBack);

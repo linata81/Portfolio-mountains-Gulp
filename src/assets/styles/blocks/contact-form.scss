@@ -108,13 +108,15 @@ label.error {
   left:20000px;
   top:0;
  }
-input.error {
+input.error, textarea.error {
   border: 2px solid #e34844 !important;
-  border-radius: 5px !important;
+  border-bottom-right-radius:5px !important;
+  border-top-right-radius:5px !important;
 }
-input.valid {
+input.valid, textarea.valid {
   border: 2px solid $green !important;
-  border-radius: 5px !important;
+  border-bottom-right-radius:5px !important;
+  border-top-right-radius:5px !important;
 }
  .contact-form__message {
    margin-top: 25px;

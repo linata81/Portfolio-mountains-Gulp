@@ -1,26 +1,31 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #111111;
+  opacity: 0.9;
+  z-index: 100;
+  display: none;
+}
 .status-popup {
-  width: 285px;
-  height: 115px;
+  width: 341px;
+  height: 150px;
   position: absolute;
   @include centered();
-  border-radius: 2px;
+  border-radius: 5px;
   text-align: center;
   padding: 20px;
   background: #fff;
-}
-.status-popup_pages {
-  width: 500px;
-  height: 500px;
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
+  z-index: 101;
 }
 .status-popup__success {
-  border: 1px solid $green;
+  border: 2px solid $green;
   display: none;
 }
 .status-popup__error {
-  border: 1px solid #e34844;
+  border: 2px solid #e34844;
   display: none;
 }
 .status-popup__close {

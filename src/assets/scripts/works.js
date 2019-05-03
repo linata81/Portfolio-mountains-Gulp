@@ -4,7 +4,9 @@ import './modules/slider';
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 import "./modules/contactForm";
+var $ = require('jquery');
 require('jquery-modal');
+require('jquery-validation');
 
 
 (function blur (){
@@ -51,5 +53,53 @@ require('jquery-modal');
   btnScrollUp.addEventListener('click', scrollUp);
 })();
 
+//проверяем и отправляем modal-form с помощью Qjuerry 
+$(document).ready(function(){
+
+  $('#modal-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+        maxlength: 33
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true,
+      }
+    },
+    submitHandler: function() {
+
+        var form = $('#modal-form'),
+        url  = "mail.php",
+        data = form.serialize();
+
+        var request = $.ajax({
+          type: 'POST',
+          url: url,
+          data: data
+        });
+
+        request.done(function() {
+          $(".popup").show();
+          $('.status-popup__success').show();
+          form.trigger("reset");
+        });
+        request.fail(function() {
+          $(".popup").show();
+          $('.status-popup__error').show();
+        });
+    }
+  });
+
+  $('.status-popup__close').on('click', function(){
+    $(".popup").hide();
+    $('.status-popup__error').hide();
+    $('.status-popup__success').hide();
+  });
+});
 
 

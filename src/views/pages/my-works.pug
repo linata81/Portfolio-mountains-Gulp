@@ -8,8 +8,6 @@ block scripts
   script(src='works.bundle.js')
 
 
-
-
 block hero
   include ../common/hero
 
@@ -60,21 +58,29 @@ block content
         .modal-form__wrapper
           .modal-form__bg
           form.modal-form(id="modal-form")
+            //- Hidden Required Fields
+            input(type="hidden" name="project_name" value="Сайт Портфолио")
+            input(type="hidden" name="admin_email" value="linata81@gmail.com")
+            input(type="hidden" name="email_from" value="info@portfolio.ru")
+            input(type="hidden" name="form_subject" value="Письмо с email с сайта")
+            //- END Hidden Required Fields
             .modal-form__title
               .subtitle Связаться со мной
             .modal-form__container
-              input(type="text" name="name" placeholder="Имя" required maxlength="33").modal-form__input
-              input(type="email" name="email" placeholder="Email" required).modal-form__input
-              textarea(name="message" placeholder="Ваше сообщение" required).modal-form__input.modal-form__input_textarea
+              input(type="text" name="name" placeholder="Имя" maxlength="33").modal-form__input
+              input(type="email" name="email" placeholder="Email" maxlength="35").modal-form__input
+              textarea(name="message" placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
             .modal-form__buttons
               button(type="submit").modal-form__button Отправить
               button(type="reset").modal-form__button Очистить
+
             .status-popup.status-popup__success
               .status-popup__message Сообщение отправлено
               .status-popup__close.button.button_green Закрыть
             .status-popup.status-popup__error
-              .status-popup__err_message Произошла ошибка
+              .status-popup__err_message Произошла ошибка, попробуйте позже.
               .status-popup__close.button.button_red Закрыть
+            .popup
 
     a(href="#").down-arrow.down-arrow_my-works
       img(src="./assets/images/icons/svg/arrow_down.svg", alt='')
