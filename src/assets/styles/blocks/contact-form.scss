@@ -130,5 +130,17 @@ input.valid, textarea.valid {
     font-size: 20px;
   }
 }
+.zoomIn {
+  animation: zoomIn 1s;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
 
-
+  50% {
+    opacity: 1;
+  }
+}
