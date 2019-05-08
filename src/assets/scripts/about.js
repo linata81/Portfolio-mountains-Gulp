@@ -4,7 +4,7 @@ import "./modules/hero";
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 import "./modules/contactForm";
-require('jquery-modal');
+import 'jquery-modal';
 
 (function initMap() {
   const google = window.google;

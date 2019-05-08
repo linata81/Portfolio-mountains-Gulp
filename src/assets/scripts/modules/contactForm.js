@@ -1,6 +1,6 @@
-var $ = require('jquery');
-var Inputmask = require('inputmask');
-require('jquery-validation');
+import $, { ajax } from 'jquery';
+import Inputmask from 'inputmask';
+import 'jquery-validation';
 
 $(document).ready(function(){
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
         url  = "callback.php",
         data = form.serialize();
 
-        var request = $.ajax({
+        var request = ajax({
           type: 'POST',
           url: url,
           data: data

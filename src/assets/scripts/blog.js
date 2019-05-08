@@ -4,7 +4,7 @@ import "./modules/hamburgerMenu";
 import "./modules/asideMenu";
 import "./modules/btnScrollDown";
 import "./modules/contactForm";
-require('jquery-modal');
+import 'jquery-modal';
 
 var menu = document.querySelector('.aside-menu');
 var semicircle = document.querySelector('.semicircle');

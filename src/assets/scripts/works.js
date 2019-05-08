@@ -4,9 +4,8 @@ import './modules/slider';
 import "./modules/hamburgerMenu";
 import "./modules/btnScrollDown";
 import "./modules/contactForm";
-var $ = require('jquery');
-require('jquery-modal');
-require('jquery-validation');
+import $, { ajax } from 'jquery';
+import 'jquery-modal';
 
 
 (function blur (){
@@ -77,7 +76,7 @@ $(document).ready(function(){
         url  = "mail.php",
         data = form.serialize();
 
-        var request = $.ajax({
+        var request = ajax({
           type: 'POST',
           url: url,
           data: data
