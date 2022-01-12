@@ -1,20 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Главная страница сайта MrBurger",
+    "title": "Сайт бухгалтерских услуг",
+    "skills": "html, css, javascript, JQuerry",
+    "photo": "./assets/images/content/artemida.png",
+    "link": "https://www.myartemida.ru/"
+  },
+  {
+    "id": 2,
+    "title": "Сайт ателье мебели",
+    "skills": "html, css, javascript, JQuerry, PHP",
+    "photo": "./assets/images/content/kolybry.png",
+    "link": "https://www.kolibry-mebel.ru/"
+  },
+  {
+    "id": 3,
+    "title": "Сайт компании КубаньКабель ЛТД",
+    "skills": "html, css, javascript, PHP",
+    "photo": "./assets/images/content/kk.png",
+    "link": "https://www.kubankabel.ru/"
+  },
+  {
+    "id": 4,
+    "title": "Сайт юридической компании",
+    "skills": "html, css, javascript, PHP",
+    "photo": "./assets/images/content/jurist.png",
+    "link": "https://www.yurist-yzn.ru/"
+  },
+  {
+    "id": 5,
+    "title": "Cайт бургерной MrBurger",
     "skills": "html, css, javascript, JQuerry",
     "photo": "./assets/images/content/work-1.png",
     "link": "//linata81.github.io/mrBurger/"
   },
   {
-    "id": 2,
-    "title": "Страница отзывы сайта MrBurger",
-    "skills": "html, css, javascript, JQuerry",
-    "photo": "./assets/images/content/work-3.png",
-    "link": "//linata81.github.io/mrBurger/"
-  },
-  {
-    "id": 3,
+    "id": 6,
     "title": "Сайт отеля",
     "skills": " html, css, javascript, php",
     "photo": "./assets/images/content/lermontov.png",
